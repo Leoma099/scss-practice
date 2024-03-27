@@ -1,0 +1,111 @@
+.sc-flex
+{
+    display: flex;
+}
+
+.sc-flex-inline
+{
+    display: inline-flex;
+}
+
+// Remove psuedo elements
+
+.sc-flex::before,
+.sc-flex::after,
+.sc-flex-inline::before,
+.sc-flex-inline::after{
+    display: none;
+}
+
+// ===== ALIGNMENT =====
+
+// Default
+
+.sc-flex-stretch
+{
+    align-items: stretch;
+}
+
+.sc-flex-start
+{
+    align-items: start;
+}
+
+.sc-flex-center
+{
+    align-items: center;
+}
+
+.sc-flex-end
+{
+    align-items: end;
+}
+
+// ===== DIRECTION =====
+
+// Default
+
+.sc-flex-row
+{
+    flex-direction: row;
+}
+
+.sc-flex-row-reverse
+{
+    flex-direction: row-reverse;
+}
+
+.sc-flex-column
+{
+    flex-direction: column;
+}
+
+.sc-flex-column-reverse
+{
+    flex-direction: column-reverse;
+}
+
+// ===== WRAP =====
+
+// Default
+
+.sc-flex-nowwrap
+{
+    flex-wrap: nowwrap;
+}
+
+.sc-flex-wrap
+{
+    flex-wrap: wrap;
+}
+
+.sc-flex-wrap
+{
+    flex-wrap: wrap-reverse;
+}
+
+// Default
+
+.sc-flex-wrap-stretch{ 
+    align-content: stretch; 
+}
+
+.sc-flex-wrap-top{ 
+    align-content: flex-start; 
+}
+
+.sc-flex-wrap-middle{ 
+    align-content: center; 
+}
+
+.sc-flex-wrap-bottom{ 
+    align-content: flex-end; 
+}
+
+.sc-flex-wrap-between{
+    align-content: space-between;
+}
+
+.sc-flex-wrap-around{
+    align-content: space-around;
+}
