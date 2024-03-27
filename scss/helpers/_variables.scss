@@ -1,0 +1,142 @@
+// ========== BREAKPOINT ==========
+
+$breakpoint: () !default;
+$breakpoint:
+(
+    small:         640px,
+    medium:        768px,
+    large:         1024px,
+    x-large:       1280px,
+    2x-large:      1536px,
+);
+
+$breakpoint-max: () !default;
+$breakpoint-max:
+(
+    small:         (640px -1),
+    medium:        (768px -1),
+    large:         (1024px -1),
+    x-large:       (1280px -1),
+    2x-large:      (1536px -1),
+);
+
+// ========== FLEXBOX & GRID ==========
+
+// Grid Template Columns
+
+$column-1:         8.333333% !default;
+$column-2:         16.666672% !default;
+$column-3:         25% !default;
+$column-4:         33.333333% !default;
+$column-5:         41.666672% !default;
+$column-6:         50% !default;
+$column-7:         58.333333% !default;
+$column-8:         66.666672% !default;
+$column-9:         75% !default;
+$column-10:        83.333333% !default;
+$column-11:        91.666667% !default;
+$column-12:        100% !default;
+
+$column-width: () !default;
+$column-width:
+(
+    1:             $column-1,
+    2:             $column-2,
+    3:             $column-3,
+    4:             $column-4,
+    5:             $column-5,
+    6:             $column-6,
+    7:             $column-7,
+    8:             $column-8,
+    9:             $column-9,
+    10:            $column-10,
+    11:            $column-11,
+    12:            $column-12,
+);
+
+// ========== COLOR ==========
+
+// Main Color
+$primary:          #001b57 !default;
+$secondary:        #0051ff !default;
+$tertiary:         #0084ff !default;
+
+// Status Color
+$success:          #2fc900 !default;
+$warning:          #ffc400 !default;
+$danger:           #ffe600 !default;
+$alert:            #ff0000 !default;
+$info:             #4fcdff !default;
+$inverse:          #ffffff !default;
+$disabled:          #a4abb6!default;
+$link:             #1E87F0 !default;
+$default:          #000000 !default;
+
+
+// Text Status Color
+$text-color: () !default;
+$text-color:
+(
+    success:       $success,
+    warning:       $warning,
+    danger:        $danger,
+    alert:         $alert,
+    info:          $info,
+    inverse:       $inverse,
+    disabled:      $disabled,
+    link:          $link,
+    default:       $default,
+);
+
+// Theme Status Color
+$theme-color: () !default;
+$theme-color:
+(
+    success:       $success,
+    warning:       $warning,
+    danger:        $danger,
+    alert:         $alert,
+    info:          $info,
+    inverse:       $inverse,
+    disabled:      $disabled,
+    link:          $link,
+    default:       $default,
+);
+
+// ========== SPACING ==========
+
+// PADDING
+
+$padding-xs:        15px !default;
+$padding-sm:        30px !default;
+$padding-md:        40px !default;
+$padding-lg:        70px !default;
+
+$padding: () !default;
+$padding:
+(
+    xs:            $padding-xs,
+    sm:            $padding-sm,
+    md:            $padding-md,
+    lg:            $padding-lg,
+);
+
+// MARGIN
+
+$margin-global:     20px !default;
+$margin-xsmall:     5px !default;
+$margin-small:      10px !default;
+$margin-medium:     40px !default;
+$margin-large:      70px !default;
+$margin-xlarge:     140px !default;
+
+$margin: () !default;
+$margin:
+(
+    global:         $margin-global,
+    xsmall:         $margin-xsmall,
+    small:          $margin-small,
+    medium:         $margin-medium,
+    large:          $margin-large,
+    xlarge:         $margin-xlarge,
+);

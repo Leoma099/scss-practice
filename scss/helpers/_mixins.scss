@@ -1,0 +1,79 @@
+// TEXT SATUS COLOR
+@mixin create-text-status-color-code($component)
+{
+    @each $modifier, $style in $text-color
+    {
+        .sc-#{$component}-#{$modifier}
+        {
+            @each $color in $style
+            {
+                color: $color !important;
+            }
+        }
+    }
+}
+
+// THEME STATUS COLOR
+@mixin create-theme-status-color-code($component)
+{
+    @each $modifier, $style in $theme-color
+    {
+        .sc-#{$component}-#{$modifier}
+        {
+            @each $color in $style
+            {
+                background-color: $color !important;
+            }
+        }
+    }
+}
+
+// GRID TEMPLATE COLUMN
+@mixin create-column($component)
+{
+    @each $modifier, $style in $column-width
+    {
+        .sc-#{$component}-#{$modifier}
+        {
+            @each $grid in $style
+            {
+                width: $grid !important;
+            }
+        }
+    }
+}
+
+// RESPONSIVE DESIGN
+@mixin respond-to($value)
+{
+    @if map-has-key($breakpoint, $value)
+    {
+        $size: map-get($breakpoint, $value);
+
+        @media screen and (min-width: $size)
+        {
+            @content;    
+        }
+    }
+    @else
+    {
+        @warn "Unknown `#{$value}` in $breakpoint";
+    }
+}
+
+@mixin respond-to-max($value)
+{
+    @if map-has-key($breakpoint, $value)
+    {
+        $size: map-get($breakpoint, $value);
+
+        @media screen and (max-width: $size)
+        {
+            @content;    
+        }
+    }
+    @else
+    {
+        @warn "Unknown `#{$value}` in $breakpoint";
+    }
+}

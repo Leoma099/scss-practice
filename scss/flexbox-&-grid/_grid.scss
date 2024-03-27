@@ -1,0 +1,19 @@
+// Variable
+// ===============================================================
+
+.sc-grid
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// Grid Template Column
+@include create-column(col);
+
+@include respond-to-max(small)
+{
+    .sc-grid
+    {
+        display: grid;
+    }
+}

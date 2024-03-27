@@ -1,0 +1,25 @@
+// helpers
+@import "../scss/helpers/variables";
+@import "../scss/helpers/mixins";
+@import "../scss/helpers/functions";
+
+// spacing
+@import "../scss/spacing/padding";
+@import "../scss/spacing/margin";
+
+// background
+@import "../scss/background/theme-color";
+
+// flexbox and grid
+@import "../scss/flexbox-&-grid/grid";
+@import "../scss/flexbox-&-grid/gap";
+
+// typography
+@import "../scss/typography/text-color";
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,51 @@
+// FULL OPERATION MARGIN
+.sc-margin-remove
+{
+    margin: 0;
+}
+.sc-margin-xsmall
+{
+    margin: $margin-xsmall;
+}
+.sc-margin-small
+{
+    margin: $margin-small;
+}
+.sc-margin-medium
+{
+    margin: $margin-medium;
+}
+.sc-margin-large
+{
+    margin: $margin-large;
+}
+.sc-margin-xlarge
+{
+    margin: $margin-xlarge;
+}
+
+// INLINE OPERATION MARGIN
+.sc-margin-y-remove
+{
+    margin-inline: 0;
+}
+.sc-margin-y-xsmall
+{
+    margin-inline: $margin-xsmall;
+}
+.sc-margin-y-small
+{
+    margin-inline: $margin-small;
+}
+.sc-margin-y-medium
+{
+    margin-inline: $margin-medium;
+}
+.sc-margin-y-large
+{
+    margin-inline: $margin-large;
+}
+.sc-margin-y-xlarge
+{
+    margin-inline: $margin-xlarge;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "practice-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "node-sass scss/index.scss -o css",
+    "css:watch": "npm run css && node-sass scss/index.scss -wo css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.72.0",
+    "sass-loader": "^14.1.1"
+  },
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

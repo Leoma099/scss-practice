@@ -1,0 +1,165 @@
+.sc-padding-remove {
+  padding: 0; }
+
+.sc-padding-xsmall {
+  padding: 15px; }
+
+.sc-padding-small {
+  padding: 30px; }
+
+.sc-padding-medium {
+  padding: 40px; }
+
+.sc-padding-large {
+  padding: 70px; }
+
+.sc-margin-remove {
+  margin: 0; }
+
+.sc-margin-xsmall {
+  margin: 5px; }
+
+.sc-margin-small {
+  margin: 10px; }
+
+.sc-margin-medium {
+  margin: 40px; }
+
+.sc-margin-large {
+  margin: 70px; }
+
+.sc-margin-xlarge {
+  margin: 140px; }
+
+.sc-margin-y-remove {
+  margin-inline: 0; }
+
+.sc-margin-y-xsmall {
+  margin-inline: 5px; }
+
+.sc-margin-y-small {
+  margin-inline: 10px; }
+
+.sc-margin-y-medium {
+  margin-inline: 40px; }
+
+.sc-margin-y-large {
+  margin-inline: 70px; }
+
+.sc-margin-y-xlarge {
+  margin-inline: 140px; }
+
+.sc-bg-success {
+  background-color: #2fc900 !important; }
+
+.sc-bg-warning {
+  background-color: #ffc400 !important; }
+
+.sc-bg-danger {
+  background-color: #ffe600 !important; }
+
+.sc-bg-alert {
+  background-color: #ff0000 !important; }
+
+.sc-bg-info {
+  background-color: #4fcdff !important; }
+
+.sc-bg-inverse {
+  background-color: #ffffff !important; }
+
+.sc-bg-disabled {
+  background-color: #a4abb6 !important; }
+
+.sc-bg-link {
+  background-color: #1E87F0 !important; }
+
+.sc-bg-default {
+  background-color: #000000 !important; }
+
+.sc-grid {
+  display: flex;
+  flex-wrap: wrap; }
+
+.sc-col-1 {
+  width: 8.33333% !important; }
+
+.sc-col-2 {
+  width: 16.66667% !important; }
+
+.sc-col-3 {
+  width: 25% !important; }
+
+.sc-col-4 {
+  width: 33.33333% !important; }
+
+.sc-col-5 {
+  width: 41.66667% !important; }
+
+.sc-col-6 {
+  width: 50% !important; }
+
+.sc-col-7 {
+  width: 58.33333% !important; }
+
+.sc-col-8 {
+  width: 66.66667% !important; }
+
+.sc-col-9 {
+  width: 75% !important; }
+
+.sc-col-10 {
+  width: 83.33333% !important; }
+
+.sc-col-11 {
+  width: 91.66667% !important; }
+
+.sc-col-12 {
+  width: 100% !important; }
+
+@media screen and (max-width: 640px) {
+  .sc-grid {
+    display: grid; } }
+
+.sc-gap-1 {
+  gap: 0.25rem; }
+
+.sc-gap-2 {
+  gap: 0.5rem; }
+
+.sc-gap-3 {
+  gap: 0.75rem; }
+
+.sc-gap-4 {
+  gap: 1rem; }
+
+.sc-text-success {
+  color: #2fc900 !important; }
+
+.sc-text-warning {
+  color: #ffc400 !important; }
+
+.sc-text-danger {
+  color: #ffe600 !important; }
+
+.sc-text-alert {
+  color: #ff0000 !important; }
+
+.sc-text-info {
+  color: #4fcdff !important; }
+
+.sc-text-inverse {
+  color: #ffffff !important; }
+
+.sc-text-disabled {
+  color: #a4abb6 !important; }
+
+.sc-text-link {
+  color: #1E87F0 !important; }
+
+.sc-text-default {
+  color: #000000 !important; }
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
