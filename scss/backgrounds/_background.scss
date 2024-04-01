@@ -1,0 +1,129 @@
+// BACKGROUND ATTACHMENT
+
+.sc-bg-fixed
+{
+    background-attachment: fixed;
+}
+.sc-bg-local
+{
+    background-attachment: local;
+}
+.sc-bg-scroll
+{
+    background-attachment: scroll;
+}
+
+// BACKGROUND CLIP
+
+.sc-bg-clip-border
+{
+    background-clip: border-box;
+}
+.sc-bg-clip-padding
+{
+    background-clip: padding-box;
+}
+.sc-bg-clip-content
+{
+    background-clip: content-box;
+}
+.sc-bg-clip-text
+{
+    background-clip: text;
+}
+
+// BACKGROUND ORIGIN
+
+.sc-bg-origin-border
+{
+    background-origin: border-box;
+}
+.sc-bg-origin-padding
+{
+    background-origin: padding-box;
+}
+.sc-bg-origin-content
+{
+    background-origin: content-box;
+}
+
+// BACKGROUND POSITION
+
+.sc-bg-position-bottom
+{
+    background-position: bottom;
+}
+.sc-bg-position-center
+{
+    background-position: center;
+}
+.sc-bg-position-left
+{
+    background-position: left;
+}
+.sc-bg-position-left-bottom
+{
+    background-position: left bottom;
+}
+.sc-bg-position-left-top
+{
+    background-position: left top;
+}
+.sc-bg-position-right
+{
+    background-position: right;
+}
+.sc-bg-position-right-bottom
+{
+    background-position: right bottom;
+}
+.sc-bg-position-right-top
+{
+    background-position: right top;
+}
+.sc-bg-position
+{
+    background-position: top;
+}
+
+// BACKGROUND REPEAT
+
+.sc-bg-repeat
+{
+    background-repeat: repeat;
+}
+.sc-bg-no-repeat
+{
+    background-repeat: no-repeat;
+}
+.sc-bg-repeat-x
+{
+    background-repeat: repeat-x;
+}
+.sc-bg-repeat-y
+{
+    background-repeat: repeat-y;
+}
+.sc-bg-repeat-round
+{
+    background-repeat: round;
+}
+.sc-bg-repeat-space
+{
+    background-repeat: space;
+}
+
+// BACKGROUND SIZE
+
+.sc-bg-auto
+{
+    background-size: auto;
+}
+.sc-bg-cover
+{
+    background-size: cover;
+}
+.sc-bg-contain
+{
+    background-size: contain;
+}

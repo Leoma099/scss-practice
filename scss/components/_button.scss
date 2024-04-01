@@ -3,4 +3,86 @@
     background-color: transparent;
     border: none;
     outline: none;
+    padding-inline: 1.5rem;
+    padding-block: .75rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+@include create-button-background-color(button);
+@include create-button-outline-color(outline);
+
+.sc-button-success
+{
+    color: $inverse;
+}
+.sc-button-warning
+{
+    color: $default;
+}
+.sc-button-danger
+{
+    color: $default;
+}
+.sc-button-alert
+{
+    color: $inverse;
+}
+.sc-button-info
+{
+    color: $default;
+}
+.sc-button-inverse
+{
+    color: $default;
+}
+.sc-button-disabled
+{
+    color: $inverse;
+}
+.sc-button-link
+{
+    color: $inverse;
+}
+.sc-button-default
+{
+    color: $inverse;
+}
+
+// OUTLINE
+.sc-button-outline-success
+{
+    color: $success;
+}
+.sc-button-outline-warning
+{
+    color: $warning;
+}
+.sc-button-outline-danger
+{
+    color: $danger;
+}
+.sc-button-outline-alert
+{
+    color: $alert;
+}
+.sc-button-outline-info
+{
+    color: $info;
+}
+.sc-button-outline-inverse
+{
+    color: $inverse;
+}
+.sc-button-outline-disabled
+{
+    color: $disabled;
+}
+.sc-button-outline-link
+{
+    color: $link;
+}
+.sc-button-outline-default
+{
+    color: $default;
 }

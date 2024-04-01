@@ -28,6 +28,35 @@
     }
 }
 
+// BUTTON BACKGROUND COLOR
+@mixin create-button-background-color($component)
+{
+    @each $modifier, $style in $button-background-color
+    {
+        .sc-#{$component}-#{$modifier}
+        {
+            @each $color in $style
+            {
+                background-color: $color !important;
+            }
+        }
+    }
+}
+
+@mixin create-button-outline-color($component)
+{
+    @each $modifier, $style in $button-background-color
+    {
+        .sc-button-#{$component}-#{$modifier}
+        {
+            @each $color in $style
+            {
+                border: 1px solid $color !important;
+            }
+        }
+    }
+}
+
 // GRID TEMPLATE COLUMN
 @mixin create-column($component)
 {

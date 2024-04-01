@@ -11,12 +11,14 @@
 @import "../scss/spacing/margin";
 
 // background
-@import "../scss/background/theme-color";
+@import "../scss/backgrounds/theme-color";
+@import "../scss//backgrounds/background";
 
 // flexbox and grid
 @import "../scss/flexbox-&-grid/flex";
 @import "../scss/flexbox-&-grid/grid";
 @import "../scss/flexbox-&-grid/gap";
+@import "../scss/flexbox-&-grid/justify";
 
 // typography
 @import "../scss/typography/text-color";

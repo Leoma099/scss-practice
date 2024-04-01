@@ -69,9 +69,9 @@
 
 // Default
 
-.sc-flex-nowwrap
+.sc-flex-nowrap
 {
-    flex-wrap: nowwrap;
+    flex-wrap: nowrap;
 }
 
 .sc-flex-wrap
@@ -79,7 +79,7 @@
     flex-wrap: wrap;
 }
 
-.sc-flex-wrap
+.sc-flex-wrap-reverse
 {
     flex-wrap: wrap-reverse;
 }
@@ -109,3 +109,7 @@
 .sc-flex-wrap-around{
     align-content: space-around;
 }
+
+// Column Width
+
+@include create-column(col);
