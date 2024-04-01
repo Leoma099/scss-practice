@@ -220,6 +220,12 @@
 .sc-height-half-screen {
   height: 50vh; }
 
+.sc-height-full {
+  height: 100%; }
+
+sc-object-fit-cover {
+  object-fit: cover; }
+
 .sc-padding-remove {
   padding: 0; }
 
