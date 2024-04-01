@@ -1,0 +1,88 @@
+// Align Content
+
+.sc-align-content-normal
+{
+    align-content: normal;
+}
+.sc-align-content-center
+{
+    align-content: center;
+}
+.sc-align-content-start
+{
+    align-content: start;
+}
+.sc-align-content-end
+{
+    align-content: end;
+}
+.sc-align-content-between
+{
+    align-content: space-between;
+}
+.sc-align-content-around
+{
+    align-content: space-around;
+}
+.sc-align-content-evenly
+{
+    align-content: space-evenly;
+}
+.sc-align-content-baseline
+{
+    align-content: baseline;
+}
+.sc-align-content-stretch
+{
+    align-content: stretch;
+}
+
+// Align Items
+
+.sc-align-items-start
+{
+    align-items: flex-start;
+}
+.sc-align-items-end
+{
+    align-items: flex-end;
+}
+.sc-align-items-center
+{
+    align-items: center;
+}
+.sc-align-items-baseline
+{
+    align-items: baseline;
+}
+.sc-align-items-stretch
+{
+    align-items: stretch;
+}
+
+// Align Self
+
+.sc-self-auto
+{
+    align-self: auto;
+}
+.sc-self-start
+{
+    align-self: flex-start;
+}
+.sc-self-end
+{
+    align-self: flex-end;
+}
+.sc-self-center
+{
+    align-self: center;
+}
+.sc-self-stretch
+{
+    align-self: stretch;
+}
+.sc-self-baseline
+{
+    align-self: baseline;
+}

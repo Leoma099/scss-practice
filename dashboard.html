@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test | Dashboard</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<style>
+    .sc-position-relative
+    {
+        .chart
+        {
+            width: 100%;
+            height: 100%;
+        }
+    }
+</style>
+<body>
+    <div class="sc-grid sc-grid-cols-9 sc-margin-small sc-gap-small">
+        <div class="sc-position-relative sc-cols-start-1 sc-cols-end-5 sc-background-inverse sc-padding-xsmall" style="height: 50dvh;">
+            <h5>DONUT CHART</h5>
+            <div class="chart">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+        <div class="sc-cols-start-5 sc-cols-end-10 sc-background-inverse sc-padding-xsmall" style="height: 50dvh;">datatable</div>
+        <div class="sc-cols-start-1 sc-cols-end-6 sc-rows-start-2 sc-rows-end-5 sc-background-inverse sc-padding-xsmall" style="height: 50dvh;">bar graph</div>
+        <div class="sc-cols-start-6 sc-cols-end-10 sc-background-inverse sc-padding-xsmall">in-house</div>
+        <div class="sc-cols-start-6 sc-cols-end-10 sc-background-inverse sc-padding-xsmall">for-arrival</div>
+        <div class="sc-cols-start-6 sc-cols-end-10 sc-background-inverse sc-padding-xsmall">for-departure</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/chart1.js"></script>
+</body>
+</html>
