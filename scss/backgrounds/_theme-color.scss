@@ -1,38 +1,38 @@
-@include create-theme-status-color-code(bg);
+@include create-theme-status-color-code(background);
 
-.sc-bg-success
+.sc-background-success
 {
     color: $inverse;
 }
-.sc-bg-warning
+.sc-background-warning
 {
     color: $default;
 }
-.sc-bg-danger
+.sc-background-danger
 {
     color: $default;
 }
-.sc-bg-alert
+.sc-background-alert
 {
     color: $inverse;
 }
-.sc-bg-info
+.sc-background-info
 {
     color: $default;
 }
-.sc-bg-inverse
+.sc-background-inverse
 {
     color: $default;
 }
-.sc-bg-disabled
+.sc-background-disabled
 {
     color: $inverse;
 }
-.sc-bg-link
+.sc-background-link
 {
     color: $inverse;
 }
-.sc-bg-default
+.sc-background-default
 {
     color: $inverse;
 }

@@ -6,6 +6,13 @@
 // components
 @import "../scss/components/button";
 
+// Layouts
+@import "../scss/layouts/overflow";
+@import "../scss/layouts/container";
+
+// Sizing
+@import "../scss/sizing/width";
+
 // spacing
 @import "../scss/spacing/padding";
 @import "../scss/spacing/margin";
@@ -14,11 +21,15 @@
 @import "../scss/backgrounds/theme-color";
 @import "../scss//backgrounds/background";
 
+// borders
+@import "../scss/borders/border-radius";
+
 // flexbox and grid
 @import "../scss/flexbox-&-grid/flex";
 @import "../scss/flexbox-&-grid/grid";
 @import "../scss/flexbox-&-grid/gap";
 @import "../scss/flexbox-&-grid/justify";
+@import "../scss/flexbox-&-grid/align";
 
 // typography
 @import "../scss/typography/text-color";
@@ -28,4 +39,9 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+}
+
+body
+{
+    background-color: #eeeeee;
 }

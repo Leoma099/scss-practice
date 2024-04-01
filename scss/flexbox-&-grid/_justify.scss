@@ -16,3 +16,61 @@
 {
     justify-content: center;
 }
+.sc-justify-between
+{
+    justify-content: space-between;
+}
+.sc-justify-around
+{
+    justify-content: space-around;
+}
+.sc-justify-evenly
+{
+    justify-content: space-evenly;
+}
+.sc-justify-stretch
+{
+    justify-content: stretch;
+}
+
+// Justify Item
+
+.sc-justify-items-start
+{
+    justify-items: start;
+}
+.sc-justify-items-end
+{
+    justify-items: end;
+}
+.sc-justify-items-center
+{
+    justify-items: center;
+}
+.sc-justify-items-stretch
+{
+    justify-items: stretch;
+}
+
+// Justify Self
+
+.sc-justify-self-auto
+{
+    justify-self: auto;
+}
+.sc-justify-self-start
+{
+    justify-self: start;
+}
+.sc-justify-self-end
+{
+    justify-self: end;
+}
+.sc-justify-self-center
+{
+    justify-self: center;
+}
+.sc-justify-self-stretch
+{
+    justify-self: stretch;
+}

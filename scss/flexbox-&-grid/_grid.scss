@@ -10,3 +10,11 @@
 @include create-grid-column-span(cols);
 @include create-grid-column-start(cols);
 @include create-grid-column-end(cols);
+
+// Grid Template Row
+@include create-grid-template-row(grid);
+
+// Grid Row Start and End
+@include create-grid-row-span(rows);
+@include create-grid-row-start(rows);
+@include create-grid-row-end(rows);

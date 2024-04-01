@@ -58,7 +58,7 @@
 }
 
 // WIDTH COLUMN
-@mixin create-column($component)
+@mixin create-width($component)
 {
     @each $modifier, $style in $column-width
     {
@@ -132,6 +132,68 @@
     }
 }
 
+// GRID TEMPLATE ROW
+@mixin create-grid-template-row($component)
+{
+    @each $modifier, $style in $grid-rows
+    {
+        .sc-#{$component}-#{$modifier}
+        {
+            @each $grid-row in $style
+            {
+                grid-template-rows: $grid-row !important;
+            }
+        }
+    }
+}
+
+// GRID ROW SPAN
+@mixin create-grid-row-span($component)
+{
+    @each $modifier, $style in $rows-span
+    {
+        .sc-#{$component}-#{$modifier}
+        {
+            @each $span in $style
+            {
+                grid-row: $span !important;
+            }
+        }
+    }
+}
+
+// GRID ROW START
+@mixin create-grid-row-start($component)
+{
+    @each $modifier, $style in $row-start
+    {
+        .sc-#{$component}-#{$modifier}
+        {
+            @each $start in $style
+            {
+                grid-row-start: $start !important;
+            }
+        }
+    }
+}
+
+// GRID ROW END
+@mixin create-grid-row-end($component)
+{
+    @each $modifier, $style in $row-end
+    {
+        .sc-#{$component}-#{$modifier}
+        {
+            @each $end in $style
+            {
+                grid-row-end: $end !important;
+            }
+        }
+    }
+}
+
+
+
 // RESPONSIVE DESIGN
 @mixin respond-to($value)
 {
@@ -164,5 +226,28 @@
     @else
     {
         @warn "Unknown `#{$value}` in $breakpoint";
+    }
+}
+
+
+
+
+
+
+
+
+// BORDER RADIUS
+
+@mixin create-border-radius($component)
+{
+    @each $modifier, $style in $border-radius
+    {
+        .sc-#{$component}-#{$modifier}
+        {
+            @each $radius in $style
+            {
+                border-radius: $radius !important;
+            }
+        }
     }
 }
