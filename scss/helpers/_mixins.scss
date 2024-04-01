@@ -57,16 +57,76 @@
     }
 }
 
-// GRID TEMPLATE COLUMN
+// WIDTH COLUMN
 @mixin create-column($component)
 {
     @each $modifier, $style in $column-width
     {
         .sc-#{$component}-#{$modifier}
         {
-            @each $grid in $style
+            @each $width-column in $style
             {
-                width: $grid !important;
+                width: $width-column !important;
+            }
+        }
+    }
+}
+
+// GRID TEMPLATE COLUMN
+@mixin create-grid-template-column($component)
+{
+    @each $modifier, $style in $grid-columns
+    {
+        .sc-#{$component}-#{$modifier}
+        {
+            @each $grid-column in $style
+            {
+                grid-template-columns: $grid-column !important;
+            }
+        }
+    }
+}
+
+// GRID COLUMN SPAN
+@mixin create-grid-column-span($component)
+{
+    @each $modifier, $style in $col-span
+    {
+        .sc-#{$component}-#{$modifier}
+        {
+            @each $span in $style
+            {
+                grid-column: $span !important;
+            }
+        }
+    }
+}
+
+// GRID COLUMN START
+@mixin create-grid-column-start($component)
+{
+    @each $modifier, $style in $col-start
+    {
+        .sc-#{$component}-#{$modifier}
+        {
+            @each $start in $style
+            {
+                grid-column-start: $start !important;
+            }
+        }
+    }
+}
+
+// GRID COLUMN END
+@mixin create-grid-column-end($component)
+{
+    @each $modifier, $style in $col-end
+    {
+        .sc-#{$component}-#{$modifier}
+        {
+            @each $end in $style
+            {
+                grid-column-end: $end !important;
             }
         }
     }

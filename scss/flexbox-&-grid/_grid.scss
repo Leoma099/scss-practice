@@ -1,0 +1,12 @@
+.sc-grid
+{
+    display: grid;
+}
+
+// Grid Template Column
+@include create-grid-template-column(grid);
+
+// Grid Column Start and End
+@include create-grid-column-span(cols);
+@include create-grid-column-start(cols);
+@include create-grid-column-end(cols);
