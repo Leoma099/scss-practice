@@ -18,3 +18,12 @@
 @include create-grid-row-span(rows);
 @include create-grid-row-start(rows);
 @include create-grid-row-end(rows);
+
+@include respond-to-max(small)
+{
+    .sc-grid
+    {
+        display: flex;
+        flex-direction: column;
+    }
+}
