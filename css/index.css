@@ -160,23 +160,20 @@
 .sc-overflow-y-scroll {
   overflow-y: scroll; }
 
-.sc-container-none {
-  width: 100%; }
+.sc-container-default {
+  margin: 1rem; }
 
 .sc-container-sm {
-  max-width: 640px; }
+  margin: 2rem; }
 
 .sc-container-md {
-  max-width: 768px; }
+  margin: 4rem; }
 
 .sc-container-lg {
-  max-width: 1024px; }
+  margin: 5rem; }
 
 .sc-container-xl {
-  max-width: 1280px; }
-
-.sc-container-xxl {
-  max-width: 1536px; }
+  margin: 6rem; }
 
 .sc-width-1 {
   width: 8.33333% !important; }
@@ -213,6 +210,9 @@
 
 .sc-width-12 {
   width: 100% !important; }
+
+.sc-height-0 {
+  height: 0; }
 
 .sc-height-full-screen {
   height: 100vh; }

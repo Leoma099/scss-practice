@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/css/index.css"> -->
 </head>
 <body>
-    <div class="sc-grid sc-grid-cols-8 sc-margin-small sc-gap-small">
-        <div class="sc-cols-start-1 sc-cols-end-10 sc-background-inverse sc-padding-xsmall">header</div>
-        <div class="sc-cols-start-1 sc-cols-end-4 sc-background-inverse sc-padding-xsmall" style="height: 40vh;">donut</div>
-        <div class="sc-cols-start-4 sc-cols-end-10 sc-background-inverse sc-padding-xsmall">datatable</div>
-        <div class="sc-cols-start-1 sc-cols-end-6 sc-rows-start-3 sc-rows-end-6 sc-background-inverse sc-padding-xsmall" style="height: 50vh;">bar graph</div>
-        <div class="sc-cols-start-6 sc-cols-end-10 sc-background-inverse sc-padding-xsmall">in-house</div>
-        <div class="sc-cols-start-6 sc-cols-end-10 sc-background-inverse sc-padding-xsmall">for-arrival</div>
-        <div class="sc-cols-start-6 sc-cols-end-10 sc-background-inverse sc-padding-xsmall">for-departure</div>
+    <div class="grid grid-cols-8 m-5">
+        <div class="relative col-start-1 col-end-4 bg-slate-400 rounded-md p-3">
+            <div class="w-48">
+                <canvas id="donutChart"></canvas>
+            </div>
+        </div>
     </div>
-    <!-- <script src="/tailwind.js"></script> -->
+    <script src="/tailwind.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/chart1.js"></script>
 </body>
 </html>

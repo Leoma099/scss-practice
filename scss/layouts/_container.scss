@@ -1,24 +1,20 @@
-.sc-container-none
+.sc-container-default
 {
-    width: 100%
+    margin: 1rem;
 }
 .sc-container-sm
 {
-    max-width: 640px;
+    margin: 2rem;
 }
 .sc-container-md
 {
-    max-width: 768px;
+    margin: 4rem;
 }
 .sc-container-lg
 {
-    max-width: 1024px;
+    margin: 5rem;
 }
 .sc-container-xl
 {
-    max-width: 1280px;
-}
-.sc-container-xxl
-{
-    max-width: 1536px;
+    margin: 6rem;
 }
