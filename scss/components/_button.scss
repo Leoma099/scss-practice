@@ -1,3 +1,18 @@
+// Button Background Color
+$button-background-color: () !default;
+$button-background-color:
+(
+    success:       $success,
+    warning:       $warning,
+    danger:        $danger,
+    alert:         $alert,
+    info:          $info,
+    inverse:       $inverse,
+    disabled:      $disabled,
+    link:          $link,
+    default:       $default,
+);
+
 .sc-button
 {
     background-color: transparent;

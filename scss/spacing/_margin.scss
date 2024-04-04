@@ -1,3 +1,23 @@
+// MARGIN
+
+$margin-global:     20px !default;
+$margin-xsmall:     5px !default;
+$margin-small:      10px !default;
+$margin-medium:     40px !default;
+$margin-large:      70px !default;
+$margin-xlarge:     140px !default;
+
+$margin: () !default;
+$margin:
+(
+    global:         $margin-global,
+    xsmall:         $margin-xsmall,
+    small:          $margin-small,
+    medium:         $margin-medium,
+    large:          $margin-large,
+    xlarge:         $margin-xlarge,
+);
+
 // FULL OPERATION MARGIN
 .sc-margin-remove
 {

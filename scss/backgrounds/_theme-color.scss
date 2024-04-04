@@ -1,3 +1,18 @@
+// Theme Status Color
+$theme-color: () !default;
+$theme-color:
+(
+    success:       $success,
+    warning:       $warning,
+    danger:        $danger,
+    alert:         $alert,
+    info:          $info,
+    inverse:       $inverse,
+    disabled:      $disabled,
+    link:          $link,
+    default:       $default,
+);
+
 @include create-theme-status-color-code(background);
 
 .sc-background-success

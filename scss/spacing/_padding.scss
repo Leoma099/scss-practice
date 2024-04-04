@@ -1,5 +1,21 @@
 // PADDING
 
+$padding-xs:        15px !default;
+$padding-sm:        30px !default;
+$padding-md:        40px !default;
+$padding-lg:        70px !default;
+
+$padding: () !default;
+$padding:
+(
+    xs:            $padding-xs,
+    sm:            $padding-sm,
+    md:            $padding-md,
+    lg:            $padding-lg,
+);
+
+// PADDING
+
 .sc-padding-remove
 {
     padding: 0;

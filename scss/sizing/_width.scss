@@ -17,5 +17,35 @@
 //
 // ========================================================================
 
+$column-1:         8.333333% !default;
+$column-2:         16.666672% !default;
+$column-3:         25% !default;
+$column-4:         33.333333% !default;
+$column-5:         41.666672% !default;
+$column-6:         50% !default;
+$column-7:         58.333333% !default;
+$column-8:         66.666672% !default;
+$column-9:         75% !default;
+$column-10:        83.333333% !default;
+$column-11:        91.666667% !default;
+$column-12:        100% !default;
+
+$column-width: () !default;
+$column-width:
+(
+    1:             $column-1,
+    2:             $column-2,
+    3:             $column-3,
+    4:             $column-4,
+    5:             $column-5,
+    6:             $column-6,
+    7:             $column-7,
+    8:             $column-8,
+    9:             $column-9,
+    10:            $column-10,
+    11:            $column-11,
+    12:            $column-12,
+);
+
 
 @include create-width(width);
