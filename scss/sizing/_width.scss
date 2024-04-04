@@ -17,35 +17,37 @@
 //
 // ========================================================================
 
-$column-1:         8.333333% !default;
-$column-2:         16.666672% !default;
-$column-3:         25% !default;
-$column-4:         33.333333% !default;
-$column-5:         41.666672% !default;
-$column-6:         50% !default;
-$column-7:         58.333333% !default;
-$column-8:         66.666672% !default;
-$column-9:         75% !default;
-$column-10:        83.333333% !default;
-$column-11:        91.666667% !default;
-$column-12:        100% !default;
+$width-1:         8.333333% !default;
+$width-2:         16.666672% !default;
+$width-3:         25% !default;
+$width-4:         33.333333% !default;
+$width-5:         41.666672% !default;
+$width-6:         50% !default;
+$width-7:         58.333333% !default;
+$width-8:         66.666672% !default;
+$width-9:         75% !default;
+$width-10:        83.333333% !default;
+$width-11:        91.666667% !default;
+$width-12:        100% !default;
 
-$column-width: () !default;
-$column-width:
+$width: () !default;
+$width:
 (
-    1:             $column-1,
-    2:             $column-2,
-    3:             $column-3,
-    4:             $column-4,
-    5:             $column-5,
-    6:             $column-6,
-    7:             $column-7,
-    8:             $column-8,
-    9:             $column-9,
-    10:            $column-10,
-    11:            $column-11,
-    12:            $column-12,
+    1:             $width-1,
+    2:             $width-2,
+    3:             $width-3,
+    4:             $width-4,
+    5:             $width-5,
+    6:             $width-6,
+    7:             $width-7,
+    8:             $width-8,
+    9:             $width-9,
+    10:            $width-10,
+    11:            $width-11,
+    12:            $width-12,
 );
 
 
 @include create-width(width);
+
+@include width-generate;

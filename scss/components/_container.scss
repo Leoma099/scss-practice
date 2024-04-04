@@ -1,0 +1,12 @@
+$container-none:    100% !default;
+$container-sm:      640px !default;
+$container-md:      768px !default;
+$container-lg:      1024px !default;
+$container-xl:      1280px !default;
+$container-2xl:     1536px !default;
+
+.sc-container 
+{
+    box-sizing: content-box;
+
+}

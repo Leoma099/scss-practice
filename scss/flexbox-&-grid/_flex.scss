@@ -109,3 +109,12 @@
 .sc-flex-wrap-around{
     align-content: space-around;
 }
+
+@include respond-to-max(small)
+{
+    .sc-flex
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

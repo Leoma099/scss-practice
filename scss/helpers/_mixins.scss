@@ -60,13 +60,13 @@
 // WIDTH COLUMN
 @mixin create-width($component)
 {
-    @each $modifier, $style in $column-width
+    @each $modifier, $style in $width
     {
         .sc-#{$component}-#{$modifier}
         {
-            @each $width-column in $style
+            @each $width-size in $style
             {
-                width: $width-column !important;
+                width: $width-size !important;
             }
         }
     }
@@ -194,7 +194,8 @@
 
 
 
-// RESPONSIVE DESIGN
+// =============== RESPONSIVE ===============
+
 @mixin respond-to($value)
 {
     @if map-has-key($breakpoint, $value)
@@ -228,6 +229,136 @@
         @warn "Unknown `#{$value}` in $breakpoint";
     }
 }
+
+
+@mixin width-with-responsive
+{
+    $width:
+    (
+        sc-width-1:
+        (
+            width: 8.333333%,
+            flex-basis: 8.333333%,
+        ),
+        sc-width-2:
+        (
+            width: 16.666672%,
+            flex-basis: 16.666672%,
+        ),
+        sc-width-3:
+        (
+            width: 25%,
+            flex-basis: 25%,
+        ),
+        sc-width-4:
+        (
+            width: 33.333333%,
+            flex-basis: 33.333333%,
+        ),
+        sc-width-5:
+        (
+            width: 41.666672%,
+            flex-basis: 41.666672%,
+        ),
+        sc-width-6:
+        (
+            width: 50%,
+            flex-basis: 50%,
+        ),
+        sc-width-7:
+        (
+            width: 58.333333%,
+            flex-basis: 58.333333%,
+        ),
+        sc-width-8:
+        (
+            width: 66.666672%,
+            flex-basis: 66.666672%,
+        ),
+        sc-width-9:
+        (
+            width: 75%,
+            flex-basis: 75%,
+        ),
+        sc-width-10:
+        (
+            width: 83.333333%,
+            flex-basis: 83.333333%,
+        ),
+        sc-width-11:
+        (
+            width: 91.666667%,
+            flex-basis: 91.666667%,
+        ),
+        sc-width-12:
+        (
+            width: 100%,
+            flex-basis: 100%,
+        )
+    );
+
+    // single width
+    @each $classname, $style in $width
+    {
+        $condition: if($classname == "sc-width", "[class*='#{$classname}']", ".#{$classname}");
+
+        #{$condition}{
+            @each $property, $value in $style{
+                #{$property}:#{$value};
+            }
+        }
+    }
+
+    // responsive of single width
+    @each $size, $value in $breakpoint{
+        @include respond-to($size){
+            @each $classname, $style in $width{
+                @include generate-width($size, $classname, $style);
+            }
+        }
+    }
+}
+
+@mixin width-generate($size, $classname, $style)
+{
+    @if($classname != 'sc-width'){
+        @if($size == 'small'){
+            .#{$classname + '\\@s'}{
+                @each $property, $value in $style{
+                    #{$property}:#{$value};
+                }
+            }
+        }
+        @else if($size == 'medium'){
+            .#{$classname + '\\@m'}{
+                @each $property, $value in $style{
+                    #{$property}:#{$value};
+                }
+            }
+        }
+        @else if($size == 'large'){
+            .#{$classname + '\\@l'}{
+                @each $property, $value in $style{
+                    #{$property}:#{$value};
+                }
+            }
+        }
+        @else if($size == 'xlarge'){
+            .#{$classname + '\\@xl'}{
+                @each $property, $value in $style{
+                    #{$property}:#{$value};
+                }
+            }
+        }
+        @else{
+            @warn 'errpr';
+        }
+
+        
+    }
+}
+
+
 
 
 
