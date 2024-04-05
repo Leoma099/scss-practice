@@ -1,21 +1,61 @@
-.sc-height-0
+$height-1:         8.333333vh !default;
+$height-2:         16.666672vh !default;
+$height-3:         25vh !default;
+$height-4:         33.333333vh !default;
+$height-5:         41.666672vh !default;
+$height-6:         50vh !default;
+$height-7:         58.333333vh !default;
+$height-8:         66.666672vh !default;
+$height-9:         75vh !default;
+$height-10:        83.333333vh !default;
+$height-11:        91.666667vh !default;
+$height-12:        100vh !default;
+.sc-height-1
 {
-    height: 0;
+    height: $height-1;
 }
-.sc-height-full-screen
+.sc-height-2
 {
-    height: 100vh;
+    height: $height-2;
 }
-.sc-height-half-screen
+.sc-height-3
 {
-    height: 50vh;
+    height: $height-3;
 }
-.sc-height-full
+.sc-height-4
 {
-    height: 100%;
+    height: $height-4;
+}
+.sc-height-5
+{
+    height: $height-5;
+}
+.sc-height-6
+{
+    height: $height-6;
+}
+.sc-height-7
+{
+    height: $height-7;
+}
+.sc-height-8
+{
+    height: $height-8;
 }
 
-sc-object-fit-cover
+.sc-height-9
 {
-    object-fit: cover;
+    height: $height-9;
+}
+.sc-height-10
+{
+    height: $height-10;
+}
+.sc-height-11
+{
+    height: $height-11;
+}
+.sc-height-12
+{
+    height: $height-12;
 }

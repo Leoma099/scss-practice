@@ -1,0 +1,43 @@
+$card-border-radius:                    4px !default;
+
+$card-body-padding-horizontal:          gutter(small) !default;
+$card-body-padding-vertical:            gutter(small) !default;
+
+$card-body-padding-horizontal-l:          gutter(medium) !default;
+$card-body-padding-vertical-l:            gutter(medium) !default;
+
+$card-header-padding-horizontal:          gutter(small) !default;
+$card-header-padding-vertical:            calc(gutter(small) / 2) !default;
+
+$card-header-padding-horizontal-l:          gutter(medium) !default;
+$card-header-padding-vertical-l:            calc(gutter(medium) / 2) !default;
+
+$card-footer-padding-horizontal:            gutter(small) !default;
+$card-footer-padding-vertical:              calc(gutter(small) / 2) !default;
+
+$card-footer-padding-horizontal-l:          gutter(medium) !default;
+$card-footer-padding-vertical-l:            calc(gutter(medium) / 2) !default;
+
+.sc-card
+{
+     position: relative;
+     box-sizing: border-box;
+     border: 1px solid #d4d4d4;
+ 
+     border-radius: $card-border-radius;
+     transition: all 0.3s ease;
+}
+.sc-card-body
+{
+     padding: $card-body-padding-vertical $card-body-padding-horizontal;
+}
+.sc-card-header
+{
+     padding: $card-header-padding-vertical $card-header-padding-horizontal;
+     border-bottom: 1px solid #d4d4d4;
+}
+.sc-card-footer
+{
+     padding: $card-footer-padding-vertical $card-footer-padding-horizontal;
+     border-top: 1px solid #d4d4d4;
+}

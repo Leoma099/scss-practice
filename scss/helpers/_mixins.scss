@@ -230,122 +230,148 @@
     }
 }
 
-
-@mixin width-with-responsive
+@mixin build-width-escorted-by-breakpoints
 {
+
     $width:
     (
-        sc-width-1:
-        (
-            width: 8.333333%,
-            flex-basis: 8.333333%,
-        ),
-        sc-width-2:
-        (
-            width: 16.666672%,
-            flex-basis: 16.666672%,
-        ),
-        sc-width-3:
-        (
-            width: 25%,
-            flex-basis: 25%,
-        ),
-        sc-width-4:
-        (
-            width: 33.333333%,
-            flex-basis: 33.333333%,
-        ),
-        sc-width-5:
-        (
-            width: 41.666672%,
-            flex-basis: 41.666672%,
-        ),
-        sc-width-6:
-        (
-            width: 50%,
-            flex-basis: 50%,
-        ),
-        sc-width-7:
-        (
-            width: 58.333333%,
-            flex-basis: 58.333333%,
-        ),
-        sc-width-8:
-        (
-            width: 66.666672%,
-            flex-basis: 66.666672%,
-        ),
-        sc-width-9:
-        (
-            width: 75%,
-            flex-basis: 75%,
-        ),
-        sc-width-10:
-        (
-            width: 83.333333%,
-            flex-basis: 83.333333%,
-        ),
-        sc-width-11:
-        (
-            width: 91.666667%,
-            flex-basis: 91.666667%,
-        ),
-        sc-width-12:
-        (
+        sc-width:(
+            box-sizing: border-box,
             width: 100%,
-            flex-basis: 100%,
-        )
+            /* 1 */
+            max-width: 100%
+        ),
+        sc-width-1:(
+            width:      8.333333%,
+            flex-basis:     8.333333%
+        ),
+        sc-width-2:(
+            width:      16.666672%,
+            flex-basis:     16.666672%
+        ),
+        sc-width-3:(
+            width:      25%,
+            flex-basis:     25%
+        ),
+        sc-width-4:(
+            width:      33.333333%,
+            flex-basis:     33.333333%
+        ),
+        sc-width-5:(
+            width:      41.666672%,
+            flex-basis:     41.666672%
+        ),
+        sc-width-6:(
+            width:      50%,
+            flex-basis:     50%
+        ),
+        sc-width-7:(
+            width:      58.333333%,
+            flex-basis:     58.333333%
+        ),
+        sc-width-8:(
+            width:      66.666672%,
+            flex-basis:     66.666672%
+        ),
+        sc-width-9:(
+            width:      75%,
+            flex-basis:     75%
+        ),
+        sc-width-10:(
+            width:      83.333333%,
+            flex-basis:     83.333333%
+        ),
+        sc-width-11:(
+            width:      91.666667%,
+            flex-basis:     91.666667%
+        ),
+        sc-width-12:(
+            width:      100%,
+            flex-basis:     100%
+        ),
+        sc-width-auto:(
+            width:      auto,
+            flex-basis:     auto
+        ),
     );
 
-    // single width
+    // build itself width
     @each $classname, $style in $width
     {
         $condition: if($classname == "sc-width", "[class*='#{$classname}']", ".#{$classname}");
 
-        #{$condition}{
-            @each $property, $value in $style{
-                #{$property}:#{$value};
+        #{$condition}
+        {
+            @each $proprety, $value in $style
+            {
+                #{$proprety}:#{$value};
             }
         }
     }
 
-    // responsive of single width
-    @each $size, $value in $breakpoint{
-        @include respond-to($size){
-            @each $classname, $style in $width{
-                @include generate-width($size, $classname, $style);
+    // build breakpoints of itself width
+    @each $size, $value in $breakpoint
+    {
+        @include respond-to($size)
+        {
+            @each $classname, $style in $width
+            {
+                @include initiate-width($size, $classname, $style);
             }
         }
     }
 }
 
-@mixin width-generate($size, $classname, $style)
+@mixin initiate-width($size, $classname, $style)
 {
-    @if($classname != 'sc-width'){
-        @if($size == 'small'){
-            .#{$classname + '\\@s'}{
-                @each $property, $value in $style{
+    @if($classname != 'sc-width')
+    {
+        @if($size == 'xsmall')
+        {
+            .#{$classname + '\\-xsmall'}
+            {
+                @each $proprety, $value in $style
+                {
+                    #{$proprety}:#{$value};
+                }
+            }
+        }
+        @else if($size == 'small')
+        {
+            .#{$classname + '\\-small'}
+            {
+                @each $property, $value in $style
+                {
                     #{$property}:#{$value};
                 }
             }
         }
-        @else if($size == 'medium'){
-            .#{$classname + '\\@m'}{
-                @each $property, $value in $style{
+        @else if($size == 'medium')
+        {
+            .#{$classname + '\\-medium'}
+            {
+                @each $property, $value in $style
+                {
                     #{$property}:#{$value};
                 }
             }
         }
-        @else if($size == 'large'){
-            .#{$classname + '\\@l'}{
-                @each $property, $value in $style{
+        @else if($size == 'large')
+        {
+            .#{$classname + '\\-large'}
+            {
+                @each $property, $value in $style
+                {
                     #{$property}:#{$value};
                 }
             }
         }
-        @else if($size == 'xlarge'){
-            .#{$classname + '\\@xl'}{
-                @each $property, $value in $style{
+        @else if($size == 'xlarge')
+        {
+            .#{$classname + '\\-xlarge'}
+            {
+                @each $property, $value in $style
+                {
                     #{$property}:#{$value};
                 }
             }
@@ -353,19 +379,8 @@
         @else{
             @warn 'errpr';
         }
-
-        
     }
 }
-
-
-
-
-
-
-
-
-
 
 // BORDER RADIUS
 
@@ -380,5 +395,16 @@
                 border-radius: $radius !important;
             }
         }
+    }
+}
+
+@mixin clearfix{
+    &:before,
+    &:after{
+        content: "";
+        display: table;
+    }
+    &:after{
+        clear: both;
     }
 }

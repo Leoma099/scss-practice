@@ -3,21 +3,21 @@
 $breakpoint: () !default;
 $breakpoint:
 (
-    small:         640px,
-    medium:        768px,
-    large:         1024px,
-    x-large:       1280px,
-    2x-large:      1536px,
+    xsmall:       640px,
+    small:        768px,
+    mediume:      1024px,
+    large:        1280px,
+    xlarge:       1536px,
 );
 
 $breakpoint-max: () !default;
 $breakpoint-max:
 (
-    small:         (640px -1),
-    medium:        (768px -1),
-    large:         (1024px -1),
-    x-large:       (1280px -1),
-    2x-large:      (1536px -1),
+    xsmall:       (640px -1),
+    small:        (768px -1),
+    mediume:      (1024px -1),
+    large:        (1280px -1),
+    xlarge:       (1536px -1),
 );
 
 // ========== COLOR ==========
@@ -37,3 +37,14 @@ $inverse:          #ffffff !default;
 $disabled:          #a4abb6!default;
 $link:             #1E87F0 !default;
 $default:          #000000 !default;
+
+
+
+$gutter: () !default;
+$gutter:
+(
+    xsmall:     15px,
+    small:      30px,
+    medium:     40px,
+    large:      70px
+)
