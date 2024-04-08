@@ -69,3 +69,28 @@ $margin:
 {
     margin-inline: $margin-xlarge;
 }
+
+.sc-margin-x-remove
+{
+    margin-block: 0;
+}
+.sc-margin-x-xsmall
+{
+    margin-block: $margin-xsmall;
+}
+.sc-margin-x-small
+{
+    margin-block: $margin-small;
+}
+.sc-margin-x-medium
+{
+    margin-block: $margin-medium;
+}
+.sc-margin-x-large
+{
+    margin-block: $margin-large;
+}
+.sc-margin-x-xlarge
+{
+    margin-block: $margin-xlarge;
+}

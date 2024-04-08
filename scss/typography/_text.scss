@@ -1,0 +1,48 @@
+// Style Modifier
+.sc-text-bold{
+    font-weight: $text-bold-font-weight;
+}
+
+.sc-text-italic{
+    font-style: italic;
+}
+
+.sc-text-oblique{
+    font-style: oblique;
+}
+
+.sc-text-underline{
+    text-decoration: underline;
+}
+
+
+// Transform Modifier
+.sc-text-uppercase{
+    text-transform: uppercase !important;
+}
+
+.sc-text-capitalize{
+    text-transform: capitalize !important;
+}
+
+.sc-text-lowercase{
+    text-transform: lowercase !important;
+}
+
+
+// Alignment Modifier
+.sc-text-left{
+    text-align: left !important;
+}
+
+.sc-text-right{
+    text-align: right !important;
+}
+
+.sc-text-center{
+    text-align: center !important;
+}
+
+.sc-text-justify{
+    text-align: justify !important;
+}

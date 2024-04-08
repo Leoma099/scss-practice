@@ -47,4 +47,31 @@ $gutter:
     small:      30px,
     medium:     40px,
     large:      70px
-)
+);
+
+
+
+$font: () !default;
+$font:(
+    font-family:        Poppins,
+    font-size:          16px,
+    kerning:            0.05rem,
+    line-height:        1.5,
+);
+
+$font-size: () !default;
+$font-size:(
+    small:          0.875rem,
+    medium:         1.25rem,
+    large:          1.5rem,
+    xlarge:         2rem,
+    xxlarge:        2.625rem
+);
+
+$font-weight: () !default;
+$font-weight:(
+    light:          300,
+    regular:        400,
+    bold:           600,
+    black:          800
+);

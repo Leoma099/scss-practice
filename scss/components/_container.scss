@@ -46,4 +46,5 @@ $container-padding-horizontal-l:                gutter(medium) !default;
 
 .sc-container-large{
     max-width: $container-large-max-width;
+    max-height: $container-xsmall-max-width;
 }

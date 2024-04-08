@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/themify-icons.css">
+</head>
+<body>
+
+
+    <div class="sc-container-large">
+        <div class="sc-flex">
+            <div class="sc-width-3" id="main">
+                <div class="sc-card">
+                    <div class="sc-card-body sc-height-12 sc-padding-xsmall">
+                        <div>
+                            <div>
+                                <div class="sc-margin-x-medium">
+                                    <ul class="sc-navigation-list">
+                                        <h3>Hotel Bookings</h3>
+                                        <li class="sc-margin-x-xsmall"><a href=""><i class="fas fa-gauge"></i> Dashboard</a></li>
+                                        <li class="sc-margin-x-xsmall"><a href=""><i class="fa-regular fa-calendar"></i> Room Blockings</a></li>
+                                        <li class="sc-margin-x-xsmall"><a href="">Rooms</a></li>
+                                        <li class="sc-margin-x-xsmall"><a href="">Room Types</a></li>
+                                        <li class="sc-margin-x-xsmall"><a href="">Room Maintenance</a></li>
+                                        <li class="sc-margin-x-xsmall"><a href="">Sales</a></li>
+                                    </ul>
+                                </div>
+                                <div class="sc-margin-x-medium">
+                                    <ul class="sc-navigation-list">
+                                        <h3>Tour Bookings</h3>
+                                        <li class="sc-margin-x-xsmall"><a href="">Tour Bookings</a></li>
+                                    </ul>
+                                </div>
+                                <div class="sc-margin-x-medium">
+                                    <ul class="sc-navigation-list">
+                                        <h3>Guest Database</h3>
+                                        <li class="sc-margin-x-xsmall"><a href="">Guests</a></li>
+                                    </ul>
+                                </div>
+                                <div class="sc-margin-x-medium">
+                                    <ul class="sc-navigation-list">
+                                        <h3>Others</h3>
+                                        <li class="sc-margin-x-xsmall"><a href="">Rentals</a></li>
+                                        <li class="sc-margin-x-xsmall"><a href="">Utilities</a></li>
+                                        <li class="sc-margin-x-xsmall"><a href="">Expense</a></li>
+                                    </ul>
+                                </div>
+                                <div class="sc-margin-x-medium">
+                                    <ul class="sc-navigation-list">
+                                        <h3>Management</h3>
+                                        <li class="sc-margin-x-xsmall"><a href="">Sales</a></li>
+                                        <li class="sc-margin-x-xsmall"><a href="">Disbursements</a></li>
+                                        <li class="sc-margin-x-xsmall"><a href="">Accounts Receivable</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sc-width-12 sc-position-relative">
+                <div class="sc-grid sc-grid-cols-11">
+                    <div class="sc-cols-start-1 sc-cols-end-12">
+                        <div class="sc-card">
+                            <div class="sc-card-body sc-padding-xsmall sc-height-1">
+                                <div class="sc-flex sc-justify-content-between sc-align-items-center">
+                                    <a onclick="hideShow()"><i class="fas fa-bars"></i></a>
+                                    <h3>Demo User</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-cols-start-1 sc-cols-end-6 sc-rows-start-2 sc-rows-end-3">
+                        <div class="sc-card">
+                            <div class="sc-card-body sc-padding-xsmall sc-height-5-5">
+                                <h3>ROOMS</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-cols-start-6 sc-cols-end-12">
+                        <div class="sc-card">
+                            <div class="sc-card-body sc-padding-xsmall sc-height-5-5">
+                                <h3>ROOM CATEGORY</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-cols-start-1 sc-cols-end-8 sc-rows-start-3 sc-rows-end-8">
+                        <div class="sc-card">
+                            <div class="sc-card-body sc-padding-xsmall sc-height-5-5">
+                                <h3>NO. OF BOOK</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-cols-start-8 sc-cols-end-12">
+                        <div class="sc-card">
+                            <div class="sc-card-body sc-padding-xsmall sc-height-2">
+                                <h3>IN-HOUSE</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-cols-start-8 sc-cols-end-12">
+                        <div class="sc-card">
+                            <div class="sc-card-body sc-padding-xsmall sc-height-2">
+                                <h3>FOR-ARRIVAL</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-cols-start-8 sc-cols-end-12">
+                        <div class="sc-card">
+                            <div class="sc-card-body sc-padding-xsmall sc-height-2">
+                                <h3>FOR-DEPARTURE</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var div = document.getElementById('main');
+        var display = 0;
+
+        function hideShow()
+        {
+            if(display == 1)
+            {
+                div.style.display = 'block';
+                display = 0;
+            }
+            else
+            {
+                div.style.display = 'none';
+                display = 1;
+            }
+        }
+    </script>
+</body>
+</html>
