@@ -1,16 +1,96 @@
+$grid-gutter-horizontal:                gutter(small) !default;
+$grid-gutter-vertical:                  $grid-gutter-horizontal !default;
+$grid-gutter-horizontal-l:              gutter(medium) !default;
+$grid-gutter-vertical-l:                $grid-gutter-horizontal-l !default;
+
+$grid-small-gutter-horizontal:          gutter(xsmall) !default;
+$grid-small-gutter-vertical:            $grid-small-gutter-horizontal !default;
+
+$grid-medium-gutter-horizontal:         gutter(medium) !default;
+$grid-medium-gutter-vertical:           $grid-medium-gutter-horizontal !default;
+
+$grid-large-gutter-horizontal:          gutter(medium) !default;
+$grid-large-gutter-vertical:            $grid-large-gutter-horizontal !default;
+$grid-large-gutter-horizontal-l:        gutter(large) !default;
+$grid-large-gutter-vertical-l:           $grid-large-gutter-horizontal-l !default;
+
+$grid-divider-border-width:             border(border-width) !default;
+$grid-divider-border:                   border(border-color) !default;
+
 .sc-flex
 {
-    -ms-box-orient: horizontal;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -moz-flex;
-    display: -webkit-flex;
+    // -ms-box-orient: horizontal;
+    // display: -webkit-box;
+    // display: -moz-box;
+    // display: -ms-flexbox;
+    // display: -moz-flex;
+    // display: -webkit-flex;
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
     margin: 0;
     list-style: none;
 }
+
+.sc-flex > * 
+{
+    margin: 0;
+}
+
+.sc-flex > * > :last-child
+{
+    margin-bottom: 0;
+}
+
+.sc-flex{
+    margin-left: (-$grid-gutter-horizontal);
+}
+
+.sc-flex > *{
+    padding-left: $grid-gutter-horizontal;
+}
+
+// FLEX SMALL GAP
+.sc-flex-small{
+    margin-left: (-$grid-small-gutter-horizontal);
+}
+
+.sc-flex-small > *{
+    padding-left: $grid-small-gutter-horizontal;
+}
+
+// FLEX MEDIUM GAP
+.sc-flex-medium{
+    margin-left: (-$grid-medium-gutter-horizontal);
+}
+
+.sc-flex-medium > *{
+    padding-left: $grid-medium-gutter-horizontal;
+}
+
+// FLEX LARGE GAP
+.sc-flex-large{
+    margin-left: (-$grid-large-gutter-horizontal);
+}
+
+.sc-flex-large > *{
+    padding-left: $grid-large-gutter-horizontal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .sc-flex-inline
 {
@@ -119,11 +199,44 @@
     align-content: space-around;
 }
 
-@include respond-to-max(small)
+
+// FLEX
+// Utilities for controlling how flex items both grow and shrink.
+.sc-flex-1
 {
-    .sc-flex
-    {
-        display: flex;
-        flex-wrap: wrap;
-    }
+    flex: 1 1 0%;
+}
+.sc-flex-auto
+{
+    flex: 1 1 auto;
+}
+.sc-flex-initial
+{
+    flex: 0 1 auto;
+}
+.sc-flex-none
+{
+    flex: none;
+}
+
+// FLEX SHRINK
+// Utilities for controlling how flex items shrink.
+.sc-flex-shrink
+{
+    flex-shrink: 1;
+}
+.sc-flex-shrink-0
+{
+    flex-shrink: 0;
+}
+
+// FLEX GROW
+// Utilities for controlling how flex items grow.
+.sc-flex-grow
+{
+    flex-grow: 1;
+}
+.sc-flex-grow-0
+{
+    flex-grow: 0;
 }

@@ -1,0 +1,7 @@
+@function gutter($value){
+    @if map-has-key($gutter, $value){
+        @return map-get($gutter, $value);
+    }
+    @warn "The key `#{$value}` is not available in the map";
+    @return null;
+}
