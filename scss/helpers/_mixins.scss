@@ -43,6 +43,7 @@
     }
 }
 
+// BUTTON OUTLINRE COLOR
 @mixin create-button-outline-color($component)
 {
     @each $modifier, $style in $button-background-color
@@ -57,144 +58,7 @@
     }
 }
 
-// WIDTH COLUMN
-@mixin create-width($component)
-{
-    @each $modifier, $style in $width
-    {
-        .sc-#{$component}-#{$modifier}
-        {
-            @each $width-size in $style
-            {
-                width: $width-size !important;
-            }
-        }
-    }
-}
-
-// GRID TEMPLATE COLUMN
-@mixin create-grid-template-column($component)
-{
-    @each $modifier, $style in $grid-columns
-    {
-        .sc-#{$component}-#{$modifier}
-        {
-            @each $grid-column in $style
-            {
-                grid-template-columns: $grid-column !important;
-            }
-        }
-    }
-}
-
-// GRID COLUMN SPAN
-@mixin create-grid-column-span($component)
-{
-    @each $modifier, $style in $col-span
-    {
-        .sc-#{$component}-#{$modifier}
-        {
-            @each $span in $style
-            {
-                grid-column: $span !important;
-            }
-        }
-    }
-}
-
-// GRID COLUMN START
-@mixin create-grid-column-start($component)
-{
-    @each $modifier, $style in $col-start
-    {
-        .sc-#{$component}-#{$modifier}
-        {
-            @each $start in $style
-            {
-                grid-column-start: $start !important;
-            }
-        }
-    }
-}
-
-// GRID COLUMN END
-@mixin create-grid-column-end($component)
-{
-    @each $modifier, $style in $col-end
-    {
-        .sc-#{$component}-#{$modifier}
-        {
-            @each $end in $style
-            {
-                grid-column-end: $end !important;
-            }
-        }
-    }
-}
-
-// GRID TEMPLATE ROW
-@mixin create-grid-template-row($component)
-{
-    @each $modifier, $style in $grid-rows
-    {
-        .sc-#{$component}-#{$modifier}
-        {
-            @each $grid-row in $style
-            {
-                grid-template-rows: $grid-row !important;
-            }
-        }
-    }
-}
-
-// GRID ROW SPAN
-@mixin create-grid-row-span($component)
-{
-    @each $modifier, $style in $rows-span
-    {
-        .sc-#{$component}-#{$modifier}
-        {
-            @each $span in $style
-            {
-                grid-row: $span !important;
-            }
-        }
-    }
-}
-
-// GRID ROW START
-@mixin create-grid-row-start($component)
-{
-    @each $modifier, $style in $row-start
-    {
-        .sc-#{$component}-#{$modifier}
-        {
-            @each $start in $style
-            {
-                grid-row-start: $start !important;
-            }
-        }
-    }
-}
-
-// GRID ROW END
-@mixin create-grid-row-end($component)
-{
-    @each $modifier, $style in $row-end
-    {
-        .sc-#{$component}-#{$modifier}
-        {
-            @each $end in $style
-            {
-                grid-row-end: $end !important;
-            }
-        }
-    }
-}
-
-
-
-// =============== RESPONSIVE ===============
+// RESPONSIVE
 
 @mixin respond-to($value)
 {
@@ -328,12 +192,9 @@
     {
         @if($size == 'xsmall')
         {
-            .#{$classname + '\\-xsmall'}
+            .sc-width-#{$classname}-#{$size}
             {
-                @each $proprety, $value in $style
-                {
-                    #{$proprety}:#{$value};
-                }
+                
             }
         }
         @else if($size == 'small')
@@ -382,8 +243,8 @@
     }
 }
 
-// BORDER RADIUS
 
+// BORDER RADIUS
 @mixin create-border-radius($component)
 {
     @each $modifier, $style in $border-radius
@@ -406,5 +267,597 @@
     }
     &:after{
         clear: both;
+    }
+}
+
+
+// GRID TEMPLATE COLUMN + GRID COLUMN SPAN START END
+@mixin build-grid-template-columns
+{
+    $grid-template-column:
+    (
+        sc-grid-columns-1:
+        (
+            grid-template-columns: repeat(1, minmax(0, 1fr))
+        ),
+        sc-grid-columns-2:
+        (
+            grid-template-columns: repeat(2, minmax(0, 1fr))
+        ),
+        sc-grid-columns-3:
+        (
+            grid-template-columns: repeat(3, minmax(0, 1fr))
+        ),
+        sc-grid-columns-4:
+        (
+            grid-template-columns: repeat(4, minmax(0, 1fr))
+        ),
+        sc-grid-columns-5:
+        (
+            grid-template-columns: repeat(5, minmax(0, 1fr))
+        ),
+        sc-grid-columns-6:
+        (
+            grid-template-columns: repeat(6, minmax(0, 1fr))
+        ),
+        sc-grid-columns-7:
+        (
+            grid-template-columns: repeat(7, minmax(0, 1fr))
+        ),
+        sc-grid-columns-8:
+        (
+            grid-template-columns: repeat(8, minmax(0, 1fr))
+        ),
+        sc-grid-columns-9:
+        (
+            grid-template-columns: repeat(9, minmax(0, 1fr))
+        ),
+        sc-grid-columns-10:
+        (
+            grid-template-columns: repeat(10, minmax(0, 1fr))
+        ),
+        sc-grid-columns-11:
+        (
+            grid-template-columns: repeat(11, minmax(0, 1fr))
+        ),
+        sc-grid-columns-12:
+        (
+            grid-template-columns: repeat(12, minmax(0, 1fr))
+        ),
+        sc-grid-columns-none:
+        (
+            grid-template-columns: none
+        ),
+        sc-grid-columns-subgrid:
+        (
+            grid-template-columns: subgrid
+        ),
+    );
+
+    @each $classname, $style in $grid-template-column
+    {
+        $condition: if($classname == "sc-width", "[class*='#{$classname}']", ".#{$classname}");
+
+        #{$condition}
+        {
+            @each $proprety, $value in $style
+            {
+                #{$proprety}:#{$value};
+            }
+        }
+    }
+}
+@mixin build-grid-column-span
+{
+    $grid-column-span:
+    (
+        sc-grid-column-span-1:
+        (
+            grid-column: span 1 / span 1
+        ),
+        sc-grid-column-span-2:
+        (
+            grid-column: span 2 / span 2
+        ),
+        sc-grid-column-span-3:
+        (
+            grid-column: span 3 / span 3
+        ),
+        sc-grid-column-span-4:
+        (
+            grid-column: span 4 / span 4
+        ),
+        sc-grid-column-span-5:
+        (
+            grid-column: span 5 / span 5
+        ),
+        sc-grid-column-span-6:
+        (
+            grid-column: span 6 / span 6
+        ),
+        sc-grid-column-span-7:
+        (
+            grid-column: span 7 / span 7
+        ),
+        sc-grid-column-span-8:
+        (
+            grid-column: span 8 / span 8
+        ),
+        sc-grid-column-span-9:
+        (
+            grid-column: span 9 / span 9
+        ),
+        sc-grid-column-span-10:
+        (
+            grid-column: span 10 / span 10
+        ),
+        sc-grid-column-span-11:
+        (
+            grid-column: span 11 / span 11
+        ),
+        sc-grid-column-span-12:
+        (
+            grid-column: span 12 / span 12
+        ),
+        sc-grid-column-span-full:
+        (
+            grid-column: span 1 / span -1
+        ),
+    );
+
+    @each $classname, $style in $grid-column-span
+    {
+        $condition: if($classname == "sc-width", "[class*='#{$classname}']", ".#{$classname}");
+
+        #{$condition}
+        {
+            @each $proprety, $value in $style
+            {
+                #{$proprety}:#{$value};
+            }
+        }
+    }
+}
+@mixin build-grid-column-start
+{
+    $grid-column-start:
+    (
+        sc-grid-column-start-1:
+        (
+            grid-column-start: 1
+        ),
+        sc-grid-column-start-2:
+        (
+            grid-column-start: 2
+        ),
+        sc-grid-column-start-3:
+        (
+            grid-column-start: 3
+        ),
+        sc-grid-column-start-4:
+        (
+            grid-column-start: 4
+        ),
+        sc-grid-column-start-5:
+        (
+            grid-column-start: 5
+        ),
+        sc-grid-column-start-6:
+        (
+            grid-column-start: 6
+        ),
+        sc-grid-column-start-7:
+        (
+            grid-column-start: 7
+        ),
+        sc-grid-column-start-8:
+        (
+            grid-column-start: 8
+        ),
+        sc-grid-column-start-9:
+        (
+            grid-column-start: 9
+        ),
+        sc-grid-column-start-10:
+        (
+            grid-column-start: 10
+        ),
+        sc-grid-column-start-11:
+        (
+            grid-column-start: 11
+        ),
+        sc-grid-column-start-12:
+        (
+            grid-column-start: 12
+        )
+    );
+
+    @each $classname, $style in $grid-column-start
+    {
+        $condition: if($classname == "sc-width", "[class*='#{$classname}']", ".#{$classname}");
+
+        #{$condition}
+        {
+            @each $proprety, $value in $style
+            {
+                #{$proprety}:#{$value};
+            }
+        }
+    }
+}
+@mixin build-grid-column-end
+{
+    $grid-column-end:
+    (
+        sc-grid-column-end-1:
+        (
+            grid-column-end: 1
+        ),
+        sc-grid-column-end-2:
+        (
+            grid-column-end: 2
+        ),
+        sc-grid-column-end-3:
+        (
+            grid-column-end: 3
+        ),
+        sc-grid-column-end-4:
+        (
+            grid-column-end: 4
+        ),
+        sc-grid-column-end-5:
+        (
+            grid-column-end: 5
+        ),
+        sc-grid-column-end-6:
+        (
+            grid-column-end: 6
+        ),
+        sc-grid-column-end-7:
+        (
+            grid-column-end: 7
+        ),
+        sc-grid-column-end-8:
+        (
+            grid-column-end: 8
+        ),
+        sc-grid-column-end-9:
+        (
+            grid-column-end: 9
+        ),
+        sc-grid-column-end-10:
+        (
+            grid-column-end: 10
+        ),
+        sc-grid-column-end-11:
+        (
+            grid-column-end: 11
+        ),
+        sc-grid-column-end-12:
+        (
+            grid-column-end: 12
+        )
+    );
+
+    @each $classname, $style in $grid-column-end
+    {
+        $condition: if($classname == "sc-width", "[class*='#{$classname}']", ".#{$classname}");
+
+        #{$condition}
+        {
+            @each $proprety, $value in $style
+            {
+                #{$proprety}:#{$value};
+            }
+        }
+    }
+}
+
+// GRID TEMPLATE ROW + GRID ROW SPAN START END
+@mixin build-grid-template-rows
+{
+    $grid-template-row:
+    (
+        sc-grid-rows-1:
+        (
+            grid-template-rows: repeat(1, minmax(0, 1fr))
+        ),
+        sc-grid-rows-2:
+        (
+            grid-template-rows: repeat(2, minmax(0, 1fr))
+        ),
+        sc-grid-rows-3:
+        (
+            grid-template-rows: repeat(3, minmax(0, 1fr))
+        ),
+        sc-grid-rows-4:
+        (
+            grid-template-rows: repeat(4, minmax(0, 1fr))
+        ),
+        sc-grid-rows-5:
+        (
+            grid-template-rows: repeat(5, minmax(0, 1fr))
+        ),
+        sc-grid-rows-6:
+        (
+            grid-template-rows: repeat(6, minmax(0, 1fr))
+        ),
+        sc-grid-rows-7:
+        (
+            grid-template-rows: repeat(7, minmax(0, 1fr))
+        ),
+        sc-grid-rows-8:
+        (
+            grid-template-rows: repeat(8, minmax(0, 1fr))
+        ),
+        sc-grid-rows-9:
+        (
+            grid-template-rows: repeat(9, minmax(0, 1fr))
+        ),
+        sc-grid-rows-10:
+        (
+            grid-template-rows: repeat(10, minmax(0, 1fr))
+        ),
+        sc-grid-rows-11:
+        (
+            grid-template-rows: repeat(11, minmax(0, 1fr))
+        ),
+        sc-grid-rows-12:
+        (
+            grid-template-rows: repeat(12, minmax(0, 1fr))
+        ),
+        sc-grid-rows-none:
+        (
+            grid-template-rows: none
+        ),
+        sc-grid-rows-subgrid:
+        (
+            grid-template-rows: subgrid
+        ),
+    );
+
+    @each $classname, $style in $grid-template-row
+    {
+        $condition: if($classname == "sc-width", "[class*='#{$classname}']", ".#{$classname}");
+
+        #{$condition}
+        {
+            @each $proprety, $value in $style
+            {
+                #{$proprety}:#{$value};
+            }
+        }
+    }
+}
+@mixin build-grid-row-span
+{
+    $grid-row-span:
+    (
+        sc-grid-row-span-1:
+        (
+            grid-row: span 1 / span 1
+        ),
+        sc-grid-row-span-2:
+        (
+            grid-row: span 2 / span 2
+        ),
+        sc-grid-row-span-3:
+        (
+            grid-row: span 3 / span 3
+        ),
+        sc-grid-row-span-4:
+        (
+            grid-row: span 4 / span 4
+        ),
+        sc-grid-row-span-5:
+        (
+            grid-row: span 5 / span 5
+        ),
+        sc-grid-row-span-6:
+        (
+            grid-row: span 6 / span 6
+        ),
+        sc-grid-row-span-7:
+        (
+            grid-row: span 7 / span 7
+        ),
+        sc-grid-row-span-8:
+        (
+            grid-row: span 8 / span 8
+        ),
+        sc-grid-row-span-9:
+        (
+            grid-row: span 9 / span 9
+        ),
+        sc-grid-row-span-10:
+        (
+            grid-row: span 10 / span 10
+        ),
+        sc-grid-row-span-11:
+        (
+            grid-row: span 11 / span 11
+        ),
+        sc-grid-row-span-12:
+        (
+            grid-row: span 12 / span 12
+        ),
+        sc-grid-row-span-full:
+        (
+            grid-row: span 1 / span -1
+        ),
+    );
+
+    @each $classname, $style in $grid-row-span
+    {
+        $condition: if($classname == "sc-width", "[class*='#{$classname}']", ".#{$classname}");
+
+        #{$condition}
+        {
+            @each $proprety, $value in $style
+            {
+                #{$proprety}:#{$value};
+            }
+        }
+    }
+}
+@mixin build-grid-row-start
+{
+    $grid-row-start:
+    (
+        sc-grid-row-start-1:
+        (
+            grid-row-start: 1
+        ),
+        sc-grid-row-start-2:
+        (
+            grid-row-start: 2
+        ),
+        sc-grid-row-start-3:
+        (
+            grid-row-start: 3
+        ),
+        sc-grid-row-start-4:
+        (
+            grid-row-start: 4
+        ),
+        sc-grid-row-start-5:
+        (
+            grid-row-start: 5
+        ),
+        sc-grid-row-start-6:
+        (
+            grid-row-start: 6
+        ),
+        sc-grid-row-start-7:
+        (
+            grid-row-start: 7
+        ),
+        sc-grid-row-start-8:
+        (
+            grid-row-start: 8
+        ),
+        sc-grid-row-start-9:
+        (
+            grid-row-start: 9
+        ),
+        sc-grid-row-start-10:
+        (
+            grid-row-start: 10
+        ),
+        sc-grid-row-start-11:
+        (
+            grid-row-start: 11
+        ),
+        sc-grid-row-start-12:
+        (
+            grid-row-start: 12
+        )
+    );
+
+    @each $classname, $style in $grid-row-start
+    {
+        $condition: if($classname == "sc-width", "[class*='#{$classname}']", ".#{$classname}");
+
+        #{$condition}
+        {
+            @each $proprety, $value in $style
+            {
+                #{$proprety}:#{$value};
+            }
+        }
+    }
+}
+@mixin build-grid-row-end
+{
+    $grid-row-end:
+    (
+        sc-grid-row-end-1:
+        (
+            grid-row-end: 1
+        ),
+        sc-grid-row-end-2:
+        (
+            grid-row-end: 2
+        ),
+        sc-grid-row-end-3:
+        (
+            grid-row-end: 3
+        ),
+        sc-grid-row-end-4:
+        (
+            grid-row-end: 4
+        ),
+        sc-grid-row-end-5:
+        (
+            grid-row-end: 5
+        ),
+        sc-grid-row-end-6:
+        (
+            grid-row-end: 6
+        ),
+        sc-grid-row-end-7:
+        (
+            grid-row-end: 7
+        ),
+        sc-grid-row-end-8:
+        (
+            grid-row-end: 8
+        ),
+        sc-grid-row-end-9:
+        (
+            grid-row-end: 9
+        ),
+        sc-grid-row-end-10:
+        (
+            grid-row-end: 10
+        ),
+        sc-grid-row-end-11:
+        (
+            grid-row-end: 11
+        ),
+        sc-grid-row-end-12:
+        (
+            grid-row-end: 12
+        )
+    );
+
+    @each $classname, $style in $grid-row-end
+    {
+        $condition: if($classname == "sc-width", "[class*='#{$classname}']", ".#{$classname}");
+
+        #{$condition}
+        {
+            @each $proprety, $value in $style
+            {
+                #{$proprety}:#{$value};
+            }
+        }
+    }
+}
+
+
+@mixin initiate-font
+{
+    $font-style:
+    (
+        sc-text-header: 
+        (
+            font-family: Helvetica,
+            font-weight: 500,
+            font-size: 16px
+        ),
+    );
+
+    @each $classname, $style in $font-style
+    {
+        $condition: if($classname == "sc-width", "[class*='#{$classname}']", ".#{$classname}");
+
+        #{$condition}
+        {
+            @each $proprety, $value in $style
+            {
+                #{$proprety}:#{$value};
+            }
+        }
     }
 }

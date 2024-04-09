@@ -1,6 +1,6 @@
 // Style Modifier
 .sc-text-bold{
-    font-weight: $text-bold-font-weight;
+    font-weight: 400;
 }
 
 .sc-text-italic{
@@ -46,3 +46,12 @@
 .sc-text-justify{
     text-align: justify !important;
 }
+
+
+// text font style
+.sc-text-title
+{
+    font-family: Poppins;
+}
+
+@include initiate-font;

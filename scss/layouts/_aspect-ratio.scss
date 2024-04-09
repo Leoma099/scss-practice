@@ -1,0 +1,26 @@
+// ASPECT RATION
+// Utilities for controlling the aspect ration of an element
+// 
+//
+//
+// Class                        Properties
+//
+// aspect-auto                  aspect-ratio: auto;
+// aspect-square                aspect-ratio: 1/1;
+// aspect-video                 aspect-ratio: 16/9;
+// ============================================================
+
+.sc-aspect-auto
+{
+    aspect-ratio: auto;
+}
+
+.sc-aspect-square
+{
+    aspect-ratio: 1/1;
+}
+
+.sc-aspect-video
+{
+    aspect-ratio: 16/9;
+}

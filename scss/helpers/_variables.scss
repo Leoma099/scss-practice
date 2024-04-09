@@ -40,9 +40,25 @@ $default:          #000000 !default;
 
 
 
+/* Spacing
+   ================================================== */
+
+// Used in margin, section, list
+$margin: () !default;
+$margin:(
+    global:    20px,
+    xsmall:     5px,
+    small:     10px,
+    medium:    40px,
+    large:     70px,
+    xlarge:    140px
+);
+
+
+
+// Used in grid, column, containers, align, cards and padding
 $gutter: () !default;
-$gutter:
-(
+$gutter:(
     xsmall:     15px,
     small:      30px,
     medium:     40px,
@@ -51,27 +67,40 @@ $gutter:
 
 
 
-$font: () !default;
-$font:(
-    font-family:        Poppins,
-    font-size:          16px,
-    kerning:            0.05rem,
-    line-height:        1.5,
+/* Control height
+   ================================================== */
+$control-height:() !default;
+$control-height:(
+    small:      30px,
+    medium:     40px,
+    large:      55px
 );
 
-$font-size: () !default;
-$font-size:(
-    small:          0.875rem,
-    medium:         1.25rem,
-    large:          1.5rem,
-    xlarge:         2rem,
-    xxlarge:        2.625rem
-);
 
-$font-weight: () !default;
-$font-weight:(
-    light:          300,
-    regular:        400,
-    bold:           600,
-    black:          800
-);
+
+/* Typography
+   ================================================== */
+   $font: () !default;
+   $font:(
+       font-family:        Poppins,
+       font-size:          16px,
+       kerning:            0.05rem,
+       line-height:        1.5,
+   );
+   
+   $font-size: () !default;
+   $font-size:(
+       small:          0.875rem,
+       medium:         1.25rem,
+       large:          1.5rem,
+       xlarge:         2rem,
+       xxlarge:        2.625rem
+   );
+   
+   $font-weight: () !default;
+   $font-weight:(
+       light:          300,
+       regular:        400,
+       bold:           600,
+       black:          800
+   );

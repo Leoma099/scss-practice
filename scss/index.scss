@@ -12,6 +12,8 @@
 // Layouts
 @import "../scss/layouts/overflow";
 @import "../scss/layouts/container";
+@import "../scss/layouts/aspect-ratio";
+@import "../scss/layouts/position";
 
 // Sizing
 @import "../scss/sizing/width";
@@ -38,6 +40,7 @@
 
 // typography
 @import "../scss/typography/text-color";
+@import "../scss/typography/text";
 
 *
 {
