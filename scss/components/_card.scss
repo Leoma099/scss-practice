@@ -1,39 +1,78 @@
-$card-body-padding-horizontal:          gutter(small) !default;
-$card-body-padding-vertical:            gutter(small) !default;
+$card-body-padding-horizontal:          gutter(xsmall) !default;
+$card-body-padding-vertical:            gutter(xsmall) !default;
 
 $card-body-padding-horizontal-l:          gutter(medium) !default;
 $card-body-padding-vertical-l:            gutter(medium) !default;
 
-$card-header-padding-horizontal:          gutter(small) !default;
-$card-header-padding-vertical:            calc(gutter(small) / 2) !default;
+$card-header-padding-horizontal:          gutter(xsmall) !default;
+$card-header-padding-vertical:            calc(gutter(xsmall) / 2) !default;
 
-$card-header-padding-horizontal-l:          gutter(medium) !default;
-$card-header-padding-vertical-l:            calc(gutter(medium) / 2) !default;
+$card-header-padding-horizontal-l:          gutter(small) !default;
+$card-header-padding-vertical-l:            calc(gutter(small) / 2) !default;
 
-$card-footer-padding-horizontal:            gutter(small) !default;
-$card-footer-padding-vertical:              calc(gutter(small) / 2) !default;
+$card-footer-padding-horizontal:            gutter(xsmall) !default;
+$card-footer-padding-vertical:              calc(gutter(xsmall) / 2) !default;
 
-$card-footer-padding-horizontal-l:          gutter(medium) !default;
-$card-footer-padding-vertical-l:            calc(gutter(medium) / 2) !default;
+$card-footer-padding-horizontal-l:          gutter(small) !default;
+$card-footer-padding-vertical-l:            calc(gutter(small) / 2) !default;
 
+
+// Default Styles of Card Element
 .sc-card
 {
      position: relative;
+     display: flex;
+     flex-direction: column;
+     min-width: 0;
+     word-wrap: break-word;
+     background-clip: border-box;
      box-sizing: border-box;
+     border: 1px solid #0000002d;
+     border-radius: 0.375rem;
 }
+.sc-card > hr
+{
+     margin-right: 0;
+     margin-left: 0;
+}
+
+// Section of Card Elements
 .sc-card-body
 {
+     flex: 1 1 auto;
      padding: $card-body-padding-vertical $card-body-padding-horizontal;
-     border: 2px solid #d4d4d4;
-     border-radius: 0.4rem;
 }
 .sc-card-header
 {
-     padding: $card-header-padding-vertical $card-header-padding-horizontal;
-     border-bottom: 1px solid #d4d4d4;
+     padding: 0.375rem 0.75rem;
+     margin-bottom: 0;
+     border-bottom: 1px solid #0000002d;
+     background-color: rgba(33, 37, 41, 0.03);
 }
 .sc-card-footer
 {
-     padding: $card-footer-padding-vertical $card-footer-padding-horizontal;
-     border-top: 1px solid #d4d4d4;
+     padding: 0.375rem 0.75rem;
+     border-top: 1px solid #0000002d;
+     background-color: rgba(33, 37, 41, 0.03);
+}
+
+@include respond-to(large)
+{
+     .sc-card-body{
+          padding: $card-body-padding-vertical-l $card-body-padding-horizontal-l;
+      }
+      
+      .sc-card-header{
+          padding: $card-header-padding-vertical-l $card-header-padding-horizontal-l;
+      }
+      
+      .sc-card-footer{
+          padding: $card-footer-padding-vertical-l $card-footer-padding-horizontal-l;
+      }
+}
+
+.sc-card-body,
+.sc-card-header,
+.sc-card-footer{
+    @include clearfix;
 }

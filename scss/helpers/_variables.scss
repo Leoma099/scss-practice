@@ -1,5 +1,6 @@
 // ========== BREAKPOINT ==========
 
+// MIN
 $breakpoint: () !default;
 $breakpoint:
 (
@@ -10,6 +11,7 @@ $breakpoint:
     xlarge:       1536px,
 );
 
+// MAX
 $breakpoint-max: () !default;
 $breakpoint-max:
 (
@@ -22,26 +24,20 @@ $breakpoint-max:
 
 // ========== COLOR ==========
 
-// Main Color
-$primary:          #001b57 !default;
-$secondary:        #0051ff !default;
-$tertiary:         #0084ff !default;
-
 // Status Color
+$primary:          #0d6efd !default;
+$secondary:        #797e86!default;
+$neutral:          #a4abb6!default;
 $success:          #2fc900 !default;
 $warning:          #ffc400 !default;
 $danger:           #ffe600 !default;
 $alert:            #ff0000 !default;
 $info:             #4fcdff !default;
 $inverse:          #ffffff !default;
-$disabled:          #a4abb6!default;
 $link:             #1E87F0 !default;
 $default:          #000000 !default;
 
-
-
-/* Spacing
-   ================================================== */
+// ========== SPACING ==========
 
 // Used in margin, section, list
 $margin: () !default;
@@ -104,3 +100,20 @@ $control-height:(
        bold:           600,
        black:          800
    );
+
+// ========== BUTTON COLOR ==========
+
+    $button-background-color: () !default;
+    $button-background-color:
+    (
+        primary:       $primary,
+        secondary:     $secondary,
+        success:       $success,
+        warning:       $warning,
+        danger:        $danger,
+        alert:         $alert,
+        info:          $info,
+        inverse:       $inverse,
+        link:          $link,
+        default:       $default,
+    );

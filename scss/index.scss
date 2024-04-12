@@ -8,6 +8,10 @@
 @import "../scss/components/card";
 @import "../scss/components/container";
 @import "../scss/components/list-group";
+@import "../scss/components/badge";
+@import "../scss/components/modal";
+@import "../scss/components/pagination";
+@import "../scss/components/notification";
 
 // Layouts
 @import "../scss/layouts/overflow";
@@ -47,9 +51,4 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-}
-
-body
-{
-    background-color: #eeeeee;
 }

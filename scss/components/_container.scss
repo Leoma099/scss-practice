@@ -1,3 +1,18 @@
+// Name:            Container
+// Description:     Component to align and center your site and grid content
+//
+// Component:       `sc-container`
+//
+// Modifiers:       `sc-container-small`
+//                  `sc-container-large`
+//                  `sc-container-expand`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
 $container-max-width:                           1200px !default;
 $container-xsmall-max-width:                    750px !default;
 $container-small-max-width:                     900px !default;
@@ -34,6 +49,16 @@ $container-padding-horizontal-l:                gutter(medium) !default;
 
  .sc-container{
     @include clearfix;
+}
+
+.sc-container > :last-child
+{
+    margin-bottom: 0;
+}
+
+.sc-container .sc-container{
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .sc-container-xsmall{

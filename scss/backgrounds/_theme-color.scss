@@ -2,13 +2,14 @@
 $theme-color: () !default;
 $theme-color:
 (
+    primary:       $primary,
+    secondary:     $secondary,
     success:       $success,
     warning:       $warning,
     danger:        $danger,
     alert:         $alert,
     info:          $info,
     inverse:       $inverse,
-    disabled:      $disabled,
     link:          $link,
     default:       $default,
 );

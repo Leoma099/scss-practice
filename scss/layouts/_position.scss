@@ -20,3 +20,67 @@
 {
     position: fixed;
 }
+
+// TOP
+.sc-top-0 {
+    top: 0 !important;
+}
+.sc-top-50 {
+top: 50% !important;
+}
+.sc-top-100 {
+top: 100% !important;
+}
+
+// BOTTOM
+.sc-bottom-0
+{
+    bottom: 0 !important;
+}
+.sc-bottom-50
+{
+    bottom: 50% !important;
+}
+.sc-bottom-100
+{
+    bottom: 100% !important;
+}
+
+// LEFT
+.sc-start-0
+{
+    left: 0 !important;
+}
+.sc-start-50
+{
+    left: 50% !important;
+}
+.sc-start-100
+{
+    left: 100% !important;
+}
+
+// RIGHT
+.sc-end-0
+{
+    right: 0 !important;
+}
+.sc-end-50
+{
+    right: 50% !important;
+}
+.sc-end-100
+{
+    right: 100% !important;
+}
+
+// TRANSLATE
+.sc-translate-middle {
+    transform: translate(-50%, -50%) !important;
+}
+.sc-translate-middle-x {
+transform: translateX(-50%) !important;
+}
+.sc-translate-middle-y {
+transform: translateY(-50%) !important;
+}

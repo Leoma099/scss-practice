@@ -1,32 +1,57 @@
-// Button Background Color
-$button-background-color: () !default;
-$button-background-color:
-(
-    success:       $success,
-    warning:       $warning,
-    danger:        $danger,
-    alert:         $alert,
-    info:          $info,
-    inverse:       $inverse,
-    disabled:      $disabled,
-    link:          $link,
-    default:       $default,
-);
-
+// Default Styles of Button Element
 .sc-button
 {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    padding-inline: 1.5rem;
-    padding-block: .75rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
+    display: inline-block;      // 1
+    padding: 8px 20px;          // 2
+    font-size: 1rem;            // 3
+    font-weight: 500;           // 4
+    line-height: 1.5;           // 5
+    text-align: center;         // 6
+    text-decoration: none;      // 7
+    vertical-align: middle;     // 8
+    cursor: pointer;            // 9
+    appearance: none;           // 10 Overbalance the appearance property that pre-owned contribute a platform-native styling based on the user (OS) Operating System.
+    border: none;               // 11
+    background: transparent;    // 12
+    border-radius: 0.25rem;     // 13
+
+}
+
+// Kind of Size in Button Element
+// Small Button Element
+.sc-button-small
+{
+    padding: 8px 20px;
+    font-size: 0.65rem;
+}
+// Large Button Element
+.sc-button-large
+{
+    padding: 8px 20px;
+    font-size: 1.25rem;
+}
+
+// Button States
+// Button Hover
+.sc-button:hover{
+}
+// Button Focus
+// Button Disabled
+.sc-button:disabled{
 }
 
 @include create-button-background-color(button);
 @include create-button-outline-color(outline);
 
+// WITH BACKGROUND COLOR
+.sc-button-primary
+{
+    color: $inverse;
+}
+.sc-button-secondary
+{
+    color: $inverse;
+}
 .sc-button-success
 {
     color: $inverse;
@@ -51,10 +76,6 @@ $button-background-color:
 {
     color: $default;
 }
-.sc-button-disabled
-{
-    color: $inverse;
-}
 .sc-button-link
 {
     color: $inverse;
@@ -64,7 +85,67 @@ $button-background-color:
     color: $inverse;
 }
 
+//WITH HOVER BACKGROUND COLOR
+.sc-button-primary:hover
+{
+    background: #0b5ed7 !important;
+    color: $inverse;
+}
+.sc-button-secondary:hover
+{
+    background: #575a5f !important;
+    color: $inverse;
+}
+.sc-button-success:hover
+{
+    background: #1a7000 !important;
+    color: $inverse;
+}
+.sc-button-warning:hover
+{
+    background: #ffd23c !important;
+    color: $default;
+}
+.sc-button-danger:hover
+{
+    background: #b3a100 !important;
+    color: $default;
+}
+.sc-button-alert:hover
+{
+    background: #c00000 !important;
+    color: $inverse;
+}
+.sc-button-info:hover
+{
+    background: #1cb6f3 !important;
+    color: $default;
+}
+.sc-button-inverse:hover
+{
+    background: #c9c9c9 !important;
+    color: $default;
+}
+.sc-button-link:hover
+{
+    background: #1561ad !important;
+    color: $inverse;
+}
+.sc-button-default:hover
+{
+    background: #272727 !important;
+    color: $inverse;
+}
+
 // OUTLINE
+.sc-button-outline-primary
+{
+    color: $primary;
+}
+.sc-button-outline-secondary
+{
+    color: $secondary;
+}
 .sc-button-outline-success
 {
     color: $success;
@@ -89,10 +170,6 @@ $button-background-color:
 {
     color: $inverse;
 }
-.sc-button-outline-disabled
-{
-    color: $disabled;
-}
 .sc-button-outline-link
 {
     color: $link;
@@ -100,4 +177,55 @@ $button-background-color:
 .sc-button-outline-default
 {
     color: $default;
+}
+// OUTLINE HOVER
+.sc-button-outline-primary:hover
+{
+    background: $primary;
+    color: $inverse;
+}
+.sc-button-outline-secondary:hover
+{
+    background: $secondary;
+    color: $inverse;
+}
+.sc-button-outline-success:hover
+{
+    background: $success;
+    color: $inverse;
+}
+.sc-button-outline-warning:hover
+{
+    background: $warning;
+    color: $default;
+}
+.sc-button-outline-danger:hover
+{
+    background: $danger;
+    color: $default;
+}
+.sc-button-outline-alert:hover
+{
+    background: $alert;
+    color: $inverse;
+}
+.sc-button-outline-info:hover
+{
+    background: $info;
+    color: $default;
+}
+.sc-button-outline-inverse:hover
+{
+    background: $inverse;
+    color: $default;
+}
+.sc-button-outline-link:hover
+{
+    background: $link;
+    color: $inverse;
+}
+.sc-button-outline-default:hover
+{
+    background: $default;
+    color: $inverse;
 }
