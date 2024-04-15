@@ -37,9 +37,9 @@ $badge-hover-color:                         color(inverse) !default;
     transform: translate(-50%, -50%);
 }
 
-.sc-badge-alert
+.sc-badge-danger
 {
-    background-color: #ff0000;
+    background-color: $red;
     color: $inverse;
 }
 

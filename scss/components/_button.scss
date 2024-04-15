@@ -1,3 +1,21 @@
+// Name:            Badge
+// Description:     Component to create button elements
+//
+// Component:       `sc-button`
+//                  `sc-button-small`
+//                  `sc-button-medium`
+//                  `sc-button-large`
+//                  `sc-button-success`
+//                  `sc-button-danger`
+//                  `sc-button-warning`
+//                  `sc-button-info`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
 // Default Styles of Button Element
 .sc-button
 {
@@ -62,10 +80,6 @@
 }
 .sc-button-danger
 {
-    color: $default;
-}
-.sc-button-alert
-{
     color: $inverse;
 }
 .sc-button-info
@@ -76,64 +90,8 @@
 {
     color: $default;
 }
-.sc-button-link
-{
-    color: $inverse;
-}
 .sc-button-default
 {
-    color: $inverse;
-}
-
-//WITH HOVER BACKGROUND COLOR
-.sc-button-primary:hover
-{
-    background: #0b5ed7 !important;
-    color: $inverse;
-}
-.sc-button-secondary:hover
-{
-    background: #575a5f !important;
-    color: $inverse;
-}
-.sc-button-success:hover
-{
-    background: #1a7000 !important;
-    color: $inverse;
-}
-.sc-button-warning:hover
-{
-    background: #ffd23c !important;
-    color: $default;
-}
-.sc-button-danger:hover
-{
-    background: #b3a100 !important;
-    color: $default;
-}
-.sc-button-alert:hover
-{
-    background: #c00000 !important;
-    color: $inverse;
-}
-.sc-button-info:hover
-{
-    background: #1cb6f3 !important;
-    color: $default;
-}
-.sc-button-inverse:hover
-{
-    background: #c9c9c9 !important;
-    color: $default;
-}
-.sc-button-link:hover
-{
-    background: #1561ad !important;
-    color: $inverse;
-}
-.sc-button-default:hover
-{
-    background: #272727 !important;
     color: $inverse;
 }
 
@@ -158,10 +116,6 @@
 {
     color: $danger;
 }
-.sc-button-outline-alert
-{
-    color: $alert;
-}
 .sc-button-outline-info
 {
     color: $info;
@@ -169,10 +123,6 @@
 .sc-button-outline-inverse
 {
     color: $inverse;
-}
-.sc-button-outline-link
-{
-    color: $link;
 }
 .sc-button-outline-default
 {
@@ -204,11 +154,6 @@
     background: $danger;
     color: $default;
 }
-.sc-button-outline-alert:hover
-{
-    background: $alert;
-    color: $inverse;
-}
 .sc-button-outline-info:hover
 {
     background: $info;
@@ -218,11 +163,6 @@
 {
     background: $inverse;
     color: $default;
-}
-.sc-button-outline-link:hover
-{
-    background: $link;
-    color: $inverse;
 }
 .sc-button-outline-default:hover
 {

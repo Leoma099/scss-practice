@@ -7,10 +7,8 @@ $theme-color:
     success:       $success,
     warning:       $warning,
     danger:        $danger,
-    alert:         $alert,
     info:          $info,
     inverse:       $inverse,
-    link:          $link,
     default:       $default,
 );
 
@@ -28,10 +26,6 @@ $theme-color:
 {
     color: $default;
 }
-.sc-background-alert
-{
-    color: $inverse;
-}
 .sc-background-info
 {
     color: $default;
@@ -41,10 +35,6 @@ $theme-color:
     color: $default;
 }
 .sc-background-disabled
-{
-    color: $inverse;
-}
-.sc-background-link
 {
     color: $inverse;
 }

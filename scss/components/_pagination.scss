@@ -24,8 +24,12 @@
     display: block;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
+    color: $primary;
     text-decoration: none;
+    background-color: #ffffff;
     border: 1px solid #0000002d;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .sc-page-item:not(:first-child) .sc-page-link
@@ -49,8 +53,9 @@
 .sc-page-link:hover
 {
     z-index: 2;
+    color: $ocean-blue;
+    background-color: $light-gray;
     border: 1px solid #0000002d;
-    background-color: #21252908 !important;
 }
 
 .sc-page-link-focus

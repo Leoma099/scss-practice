@@ -12,6 +12,9 @@
 @import "../scss/components/modal";
 @import "../scss/components/pagination";
 @import "../scss/components/notification";
+@import "../scss/components/placeholders";
+@import "../scss/components/loaders";
+@import "../scss/components/avatars";
 
 // Layouts
 @import "../scss/layouts/overflow";
@@ -41,6 +44,10 @@
 @import "../scss/flexbox-&-grid/justify";
 @import "../scss/flexbox-&-grid/align";
 @import "../scss/flexbox-&-grid/place";
+
+// Forms
+
+@import "../scss/forms/form-control";
 
 // typography
 @import "../scss/typography/text-color";

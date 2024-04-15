@@ -12,6 +12,11 @@ $height-9:         75vh !default;
 $height-10:        83.333333vh !default;
 $height-11:        91.666667vh !default;
 $height-12:        100vh !default;
+$height-none:      none !default;
+.sc-height-none
+{
+    height: $height-none;
+}
 .sc-height-1
 {
     height: $height-1;

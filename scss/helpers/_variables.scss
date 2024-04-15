@@ -24,18 +24,42 @@ $breakpoint-max:
 
 // ========== COLOR ==========
 
+// PRIMARY COLOR
+$red:              #e62321 !default;
+$yellow:           #f5e71a !default;
+$blue:             #2b499a !default;
+
+// SECONDARY COLOR
+$purple:           #514594 !default;
+$green:            #69b42d !default;
+$orange:           #e8571B !default;
+
+// TERTIARY COLOR
+$orange-yellow:    #f18218 !default;
+$yellow-orange:    #fabb0f !default;
+$green-yellow:     #afca0d !default;
+$blue-green:       #00a7ac !default;
+$ocean-blue:       #0a70b8 !default;
+$purple:           #514594 !default;
+$pink:             #e63480 !default;
+
+// DEFAULT COLOR
+$black:            #000000 !default;
+$gray:             #808080 !default;
+$light-gray:       #c0c0c0 !default;
+$white:            #ffffff !default;
+
 // Status Color
-$primary:          #0d6efd !default;
-$secondary:        #797e86!default;
-$neutral:          #a4abb6!default;
-$success:          #2fc900 !default;
-$warning:          #ffc400 !default;
-$danger:           #ffe600 !default;
-$alert:            #ff0000 !default;
-$info:             #4fcdff !default;
-$inverse:          #ffffff !default;
-$link:             #1E87F0 !default;
-$default:          #000000 !default;
+$primary:          $ocean-blue;
+$secondary:        $gray;
+$success:          $green;
+$danger:           $red;
+$warning:          $yellow-orange;
+$info:             $blue-green;
+$inverse:          $white;
+$neutral:          $light-gray;
+$disabled:         $gray;
+$default:          $black;
 
 // ========== SPACING ==========
 
@@ -111,9 +135,7 @@ $control-height:(
         success:       $success,
         warning:       $warning,
         danger:        $danger,
-        alert:         $alert,
         info:          $info,
         inverse:       $inverse,
-        link:          $link,
         default:       $default,
     );

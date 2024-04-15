@@ -1,0 +1,44 @@
+.sc-placeholder
+{
+    display: inline-block;
+    min-height: 1em;
+    vertical-align: middle;
+    cursor: wait;
+    background-color: currentColor;
+    opacity: 0.5;
+}
+
+
+.sc-placeholder .sc-button::before
+{
+    display: inline-block;
+    content: '';
+}
+
+.sc-placeholder-xs
+{
+    min-height: 0.6em;
+}
+
+.sc-placeholder-sm
+{
+    min-height: 0.8em;
+}
+
+.sc-placeholder-lg
+{
+    min-height: 1.2em;
+}
+
+.sc-placeholder-glow .sc-placeholder
+{
+    animation: placeholder-glow 2s ease-in-out infinite;
+}
+
+@keyframes placeholder-glow
+{
+    50%
+    {
+        opacity: 0.2;
+    }
+}
