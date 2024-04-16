@@ -50,6 +50,15 @@ $grid-divider-border:                   border(border-color) !default;
     padding-left: $grid-gutter-horizontal;
 }
 
+// FLEX NONE
+.sc-flex-none{
+    margin-left: 0;
+}
+
+.sc-flex-none > *{
+    padding-left: 0;
+}
+
 // FLEX SMALL GAP
 .sc-flex-small{
     margin-left: (-$grid-small-gutter-horizontal);

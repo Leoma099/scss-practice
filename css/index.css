@@ -358,7 +358,7 @@
   border-top-right-radius: 0.375rem; }
 
 .sc-modal-header .sc-button-close {
-  padding: calc(1rem * 0.5) calc(1rem * 0,5);
+  padding: calc(1rem * 0.5) calc(1rem * 0.5);
   margin: calc(-0.5 * 1rem) calc(-0.5 * 1rem) calc(-0.5 * 1rem) auto; }
 
 .sc-modal-title {
@@ -537,13 +537,224 @@
 .sc-avatar {
   width: 48px;
   height: 48px;
-  display: inline-block;
-  color: #e5e5e5;
+  border-radius: 100%;
+  overflow: hidden;
+  background-color: #E5E5E5; }
+
+.sc-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; }
+
+.sc-avatar-xsmall {
+  width: 24px;
+  height: 24px;
   font-size: 10px;
-  background-color: #e5e5e5;
-  border-radius: 999999%;
-  text-align: center;
+  line-height: 24px;
+  border-radius: 100%;
   overflow: hidden; }
+
+.sc-avatar-small {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+  line-height: 32px;
+  border-radius: 100%;
+  overflow: hidden; }
+
+.sc-avatar-medium {
+  width: 64px;
+  height: 64px;
+  font-size: 20px;
+  line-height: 64px;
+  border-radius: 100%;
+  overflow: hidden; }
+
+.sc-avatar-large {
+  width: 96px;
+  height: 96px;
+  font-size: 36px;
+  line-height: 96px;
+  border-radius: 100%;
+  overflow: hidden; }
+
+.sc-avatar-xlarge {
+  width: 128px;
+  height: 128px;
+  font-size: 48px;
+  line-height: 128px;
+  border-radius: 100%;
+  overflow: hidden; }
+
+.sc-avatar-xxlarge {
+  width: 160px;
+  height: 160px;
+  font-size: 60px;
+  line-height: 160px;
+  border-radius: 100%;
+  overflow: hidden; }
+
+.sc-avatar-primary {
+  background-color: color(primary); }
+
+.sc-avatar-secondary {
+  background-color: color(secondary); }
+
+.sc-offcanvas {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: layer(offcanvas);
+  height: 100%; }
+
+.sc-offcanvas .sc-offcanvas-bloc {
+  display: block; }
+
+.sc-offcanvas .sc-offcanvas-flip {
+  right: 0;
+  left: auto; }
+
+.sc-offcanvas-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 30px;
+  box-sizing: border-box;
+  height: 94%;
+  width: 270px;
+  padding: margin(global) margin(global);
+  background: color(inverse);
+  border-radius: 20px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transform: translate(-100%, 3%); }
+
+.sc-offcanvas-bar .sc-offcanvas-bar-full {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  border-radius: 0px;
+  transform: translate(-100%, 0); }
+
+@media screen and (min-width: 1024px) {
+  .sc-offcanvas-bar {
+    width: 350px;
+    padding: 40px 40px; } }
+
+@media screen and (min-width: 1280px) {
+  .sc-offcanvas-bar {
+    width: 450px;
+    padding: 40px 40px; } }
+
+/* Flip modifier */
+.sc-offcanvas-flip .sc-offcanvas-bar {
+  left: auto;
+  right: 30px;
+  transform: translate(100%, 3%); }
+
+.sc-offcanvas-flip .sc-offcanvas-bar.sc-offcanvas-bar-full {
+  right: 0;
+  transform: translate(100%, 0); }
+
+/*
+ * Open
+ */
+.sc-open > .sc-offcanvas-bar {
+  transform: translate(0, 3%); }
+
+.sc-open > .sc-offcanvas-bar.sc-offcanvas-bar-full {
+  transform: translate(0, 0); }
+
+/*
+ * Slide animation (Used in slide and push mode)
+ */
+.sc-offcanvas-bar-animation {
+  transition: transform 0.3s ease-out; }
+
+/* Title
+   ================================================== */
+.sc-offcanvas-title {
+  color: color(emphasis);
+  font-size: font-size(large);
+  line-height: font(line-height);
+  font-weight: font-weight(bold);
+  margin: 0; }
+
+/* Close
+ * Adopts `sc-close`
+   ================================================== */
+.sc-offcanvas-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px; }
+
+/* Overlay
+   ================================================== */
+/*
+ * Overlay the whole page, Needed for the `::before`
+ * 1. Using `100vw` so no modification is needed when off-canvas is flipped
+ * 2. Allow for closing with swipe gesture on devices with pointer events
+ */
+.sc-offcanvas-overlay {
+  /* 1 */
+  width: 100vw;
+  /* 2 */
+  touch-action: none; }
+
+/*
+ * 1. Mask the whole page
+ * 2. Fade-in transition
+ */
+.sc-offcanvas-overlay::before {
+  /* 1 */
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.1);
+  /* 2 */
+  opacity: 0;
+  transition: opacity 0.3s linear; }
+
+.sc-offcanvas-overlay.sc-open::before {
+  opacity: 1; }
+
+/* Prevent scrolling
+   ================================================== */
+/*
+ * Prepare slide-out animation (Used in reveal and push mode)
+ * Using `position: left` instead `transform` beacuse position `fixed` elements like sticky navbars
+ * lose thier fixed state and behaves like `absolute` within a transformed container
+ * 1. Provide a fixed width and prevent shrinking
+ */
+.sc-offcanvas-container {
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease-out;
+  /* 1 */
+  box-sizing: border-box;
+  width: 100%; }
+
+/*
+ * Activate slide-out animation
+ */
+:not(.sc-offcanvas-flip).sc-offcanvas-container-animation {
+  left: 270px; }
+
+.sc-offcanvas-flip.sc-offcanvas-container-animation {
+  left: -270px; }
+
+/* Tabled landscape and bigger */
+@media screen and (min-width: 1024px) {
+  :not(.sc-offcanvas-flip).sc-offcanvas-container-animation {
+    left: 350px; }
+  .sc-offcanvas-flip.sc-offcanvas-container-animation {
+    left: -350px; } }
 
 .sc-overflow-none {
   overflow: none; }
@@ -1108,6 +1319,12 @@
 .sc-margin-x-xlarge {
   margin-block: 140px; }
 
+.sc-margin-top-xsmall {
+  margin-top: 5px; }
+
+.sc-margin-top-small {
+  margin-block: 10px; }
+
 .sc-background-primary {
   background-color: #0a70b8 !important; }
 
@@ -1282,6 +1499,12 @@
 
 .sc-flex > * {
   padding-left: 30px; }
+
+.sc-flex-none {
+  margin-left: 0; }
+
+.sc-flex-none > * {
+  padding-left: 0; }
 
 .sc-flex-small {
   margin-left: -15px; }

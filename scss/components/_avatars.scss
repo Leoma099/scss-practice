@@ -1,12 +1,139 @@
+// Name:            Badge
+// Description:     Component to create avatart element
+//
+// Component:       `sc-avatar`
+//                  `sc-avatar-small`
+//                  `sc-avatar-medium`
+//                  `sc-avatar-large`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+$avatar-default:                                    #E5E5E5 !default;
+$avatar-primary:                                    color(primary) !default;
+$avatar-primary-color:                              color(inverse) !default;
+$avatar-secondary:                                  color(secondary) !default;
+$avatar-secondary-color:                            color(secondary) !default;
+
+$avatar-height-xs:                                  24px !default;
+$avatar-width-xs:                                   $avatar-height-xs !default;
+$avatar-line-height-xs:                             $avatar-height-xs !default;
+$avatar-font-size-xs:                               10px !default;
+
+$avatar-height-s:                                   32px !default;
+$avatar-width-s:                                    $avatar-height-s !default;
+$avatar-line-height-s:                              $avatar-height-s !default;
+$avatar-font-size-s:                                12px !default;
+
+$avatar-height:                                     48px !default;
+$avatar-width:                                      $avatar-height !default;
+$avatar-line-height:                                $avatar-height !default;
+$avatar-font-size:                                  16px !default;
+
+$avatar-height-m:                                   64px !default;
+$avatar-width-m:                                    $avatar-height-m !default;
+$avatar-line-height-m:                              $avatar-height-m !default;
+$avatar-font-size-m:                                20px !default;
+
+$avatar-height-l:                                   96px !default;
+$avatar-width-l:                                    $avatar-height-l !default;
+$avatar-line-height-l:                              $avatar-height-l !default;
+$avatar-font-size-l:                                36px !default;
+
+$avatar-height-xl:                                  128px !default;
+$avatar-width-xl:                                   $avatar-height-xl !default;
+$avatar-line-height-xl:                             $avatar-height-xl !default;
+$avatar-font-size-xl:                               48px !default;
+
+$avatar-height-xxl:                                  160px !default;
+$avatar-width-xxl:                                   $avatar-height-xxl !default;
+$avatar-line-height-xxl:                             $avatar-height-xxl !default;
+$avatar-font-size-xxl:                               60px !default;
 .sc-avatar
 {
-    width: 48px;
-    height: 48px;
-    display: inline-block;
-    color: #e5e5e5;
-    font-size: 10px;
-    background-color: #e5e5e5;
-    border-radius: 999999%;
-    text-align: center;
+    width: $avatar-width;
+    height: $avatar-height;
+    border-radius: 100%;
     overflow: hidden;
+    background-color: $avatar-default;
+}
+
+.sc-avatar img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sc-avatar-xsmall
+{
+    width: $avatar-width-xs;
+    height: $avatar-height-xs;
+    font-size: $avatar-font-size-xs;
+    line-height: $avatar-line-height-xs;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.sc-avatar-small
+{
+    width: $avatar-width-s;
+    height: $avatar-height-s;
+    font-size: $avatar-font-size-s;
+    line-height: $avatar-line-height-s;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.sc-avatar-medium
+{
+    width: $avatar-width-m;
+    height: $avatar-height-m;
+    font-size: $avatar-font-size-m;
+    line-height: $avatar-line-height-m;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.sc-avatar-large
+{
+    width: $avatar-width-l;
+    height: $avatar-height-l;
+    font-size: $avatar-font-size-l;
+    line-height: $avatar-line-height-l;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.sc-avatar-xlarge
+{
+    width: $avatar-width-xl;
+    height: $avatar-height-xl;
+    font-size: $avatar-font-size-xl;
+    line-height: $avatar-line-height-xl;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.sc-avatar-xxlarge
+{
+    width: $avatar-width-xxl;
+    height: $avatar-height-xxl;
+    font-size: $avatar-font-size-xxl;
+    line-height: $avatar-line-height-xxl;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.sc-avatar-primary
+{
+    background-color: $avatar-primary;
+}
+
+.sc-avatar-secondary
+{
+    background-color: $avatar-secondary;
 }
